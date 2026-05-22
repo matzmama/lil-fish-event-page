@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lil Fish Community Center</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()"
+        id="topBtn"
+        title="Go to top">
+
+    ↑
+
+</button>
+
+<script>
+
+    // SHOW BUTTON WHEN SCROLLING
+    window.onscroll = function() {
+
+        scrollFunction();
+
+    };
+
+    function scrollFunction() {
+
+        if (
+            document.body.scrollTop > 300 ||
+            document.documentElement.scrollTop > 300
+        ) {
+
+            document.getElementById("topBtn").style.display = "block";
+
+        } else {
+
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    // SCROLL TO TOP
+    function topFunction() {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+        });
+    }
+
+</script>
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>
+
+        Lil Fish Community Center
+
+    </h1>
+
+    <nav>
+<nav class="navbar">
+   
+    <button class="hamburger" id="hamburger">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+    <li>
+        <a href="index.html">Home</a>
+    </li>
+
+    <li>
+        <a href="about.html">About</a>
+    </li>
+
+    <li>
+        <a href="events.html">Events</a>
+    </li>
+
+    <li>
+        <a href="gallery.html">Gallery</a>
+    </li>
+
+    <li>
+        <a href="contact.html">Contact</a>
+    </li>
+
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+
+            Where Small Town Traditions
+            Create Lifelong Memories
+
+        </h2>
+
+        <p>
+
+            Weddings, festivals, concerts,
+            markets, and unforgettable
+            community events.
+
+        </p>
+
+        <a href="events.html"
+           class="btn">
+
+           View Events
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FEATURED EVENTS -->
+<section class="featured-events">
+
+    <h2 class="section-title">
+
+        Featured Events
+
+    </h2>
+
+    <div class="card-container">
+
+        <!-- HARVEST FESTIVAL -->
+        <div class="flip-card">
+
+            <div class="flip-card-inner">
+
+                <!-- FRONT -->
+                <div class="flip-card-front">
+
+                    <img src="images/lil fish harvest festival.png"
+                         alt="Harvest Festival">
+
+                    <div class="card-content">
+
+                        <h3>
+
+                            Harvest Festival
+
+                        </h3>
+
+                        <p>
+
+                            Hayrides, pumpkins,
+                            local vendors, and
+                            live entertainment.
+
+                        </p>
+
+                        <a href="#"
+                           class="btn">
+
+                           Vendor Info Here
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BACK -->
+                <div class="flip-card-back">
+
+                    <h3>
+
+                        Vendor Information
+
+                    </h3>
+
+                    <p>
+
+                        Booth Fee: $75
+
+                    </p>
+
+                    <p>
+
+                        10x10 vendor space included.
+
+                    </p>
+
+                    <p>
+
+                        Perfect for:
+                        farms,
+                        baked goods,
+                        handmade crafts,
+                        and seasonal decor.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- HOLIDAY MARKET -->
+        <div class="flip-card">
+
+            <div class="flip-card-inner">
+
+                <!-- FRONT -->
+                <div class="flip-card-front">
+
+                    <img src="images/Lil Fish Holiday market.png"
+                         alt="Holiday Market">
+
+                    <div class="card-content">
+
+                        <h3>
+
+                            Holiday Market
+
+                        </h3>
+
+                        <p>
+
+                            Seasonal shopping,
+                            local artisans,
+                            festive decor,
+                            and holiday treats.
+
+                        </p>
+
+                        <a href="#"
+                           class="btn">
+
+                           Vendor Info Here
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- BACK -->
+                <div class="flip-card-back">
+
+                    <h3>
+
+                        Vendor Information
+
+                    </h3>
+
+                    <p>
+
+                        Booth Fee: $100
+
+                    </p>
+
+                    <p>
+
+                        Indoor vendor spaces included.
+
+                    </p>
+
+                    <p>
+
+                        Looking for:
+                        artists,
+                        bakers,
+                        boutiques,
+                        and local makers.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VENDOR REGISTRATION BANNER -->
+<section class="vendor-banner">
+
+    <div class="vendor-banner-content">
+
+        <h2>
+
+            Vendor Registration Open
+
+        </h2>
+
+        <p>
+
+            Interested in becoming a vendor at one of our
+            seasonal events?
+
+            Applications for the Harvest Festival and
+            Holiday Market are now open.
+
+            Vendor registration closes 30 days before
+            each event date.
+
+        </p>
+
+        <a href="contact.html"
+           class="btn">
+
+           Apply Today
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+    </div>
+
+    <p>
+
+        © 2026 Lil Fish Community Center
+
+    </p>
+
+</footer>
+
+</body>
+</html>

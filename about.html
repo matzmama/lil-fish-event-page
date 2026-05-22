@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About | Lil Fish Community Center</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()"
+        id="topBtn"
+        title="Go to top">
+
+    ↑
+
+</button>
+
+<script>
+
+    // SHOW BUTTON WHEN SCROLLING
+    window.onscroll = function() {
+
+        scrollFunction();
+
+    };
+
+    function scrollFunction() {
+
+        if (
+            document.body.scrollTop > 300 ||
+            document.documentElement.scrollTop > 300
+        ) {
+
+            document.getElementById("topBtn").style.display = "block";
+
+        } else {
+
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    // SCROLL TO TOP
+    function topFunction() {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+        });
+    }
+
+</script>
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>Lil Fish Community Center</h1>
+<nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+
+    <!-- IMAGE -->
+    <img src="images/plain lil fish photo.png"
+         alt="Lil Fish Community Center">
+
+    <!-- TEXT -->
+    <div class="about-text">
+
+        <h2>
+
+            About Lil Fish Community Center
+
+        </h2>
+
+        <p>
+
+            Nestled in the heart of a small farming
+            and fishing town, Lil Fish Community Center
+            has served as a gathering place for families,
+            celebrations, and community traditions
+            since 1926.
+
+        </p>
+
+        <p>
+
+            What began as a small town meeting hall
+            has grown into one of the community’s
+            most beloved event spaces — hosting
+            weddings, seasonal festivals,
+            live music, graduations,
+            anniversary celebrations,
+            and unforgettable local events.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CURRENT USE SECTION -->
+<section class="custom-events">
+
+    <h2>
+
+        What The Center Is Used For Today
+
+    </h2>
+
+    <p>
+
+        Today, Lil Fish Community Center continues
+        to bring people together through weddings,
+        concerts, holiday markets,
+        harvest festivals,
+        retirement parties,
+        reunions, graduation celebrations,
+        and community events throughout the year.
+
+    </p>
+
+    <p>
+
+        With flexible indoor and outdoor event spaces,
+        modern amenities,
+        and small-town charm,
+        the center remains a cornerstone
+        of the Lil Fish community.
+
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <a href="#">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+    </div>
+
+    <p>
+
+        © 2026 Lil Fish Community Center
+
+    </p>
+
+</footer>
+
+</body>
+</html>

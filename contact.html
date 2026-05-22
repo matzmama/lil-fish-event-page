@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Lil Fish Community Center</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- CONTACT PAGE ONLY STYLING -->
+    <style>
+
+        /* REMOVE HERO BACKGROUND IMAGE ONLY FOR CONTACT PAGE */
+        .hero {
+
+            background-color: #FAF7F2 !important;
+
+            background-image: none !important;
+
+            padding: 120px 20px;
+
+            text-align: center;
+        }
+
+        /* CONTACT SECTION */
+        .about-section {
+
+            display: flex;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 50px;
+
+            background-color: #162B40;
+
+            color: white;
+        }
+
+        /* CONTACT TEXT */
+        .about-text h2 {
+
+            font-size: 2.5rem;
+
+            margin-bottom: 20px;
+
+            color: #D6B36A;
+        }
+
+        .about-text p {
+
+            font-size: 1.1rem;
+
+            line-height: 1.8;
+        }
+
+    </style>
+
+</head>
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()"
+        id="topBtn"
+        title="Go to top">
+
+    ↑
+
+</button>
+
+<script>
+
+    // SHOW BUTTON WHEN SCROLLING
+    window.onscroll = function() {
+
+        scrollFunction();
+
+    };
+
+    function scrollFunction() {
+
+        if (
+            document.body.scrollTop > 300 ||
+            document.documentElement.scrollTop > 300
+        ) {
+
+            document.getElementById("topBtn").style.display = "block";
+
+        } else {
+
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    // SCROLL TO TOP
+    function topFunction() {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+        });
+    }
+
+</script>
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>Lil Fish Community Center</h1>
+
+   <nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+</header>
+
+<!-- CONTACT HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <!-- LOGO -->
+        <img src="images/lil fish logo.png"
+             alt="Lil Fish Logo"
+             class="contact-logo">
+
+        <h2 style="color:#0B1F33;">
+
+            Book Your Next Event
+
+        </h2>
+
+        <p style="color:#0B1F33;">
+
+            Weddings, concerts, holiday markets,
+            harvest festivals, and unforgettable
+            community gatherings.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="about-section">
+
+    <div class="about-text">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            <strong>Address:</strong><br>
+
+            102 Riverbend Lane<br>
+
+            Lil Fish, Oregon 97211
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Phone:</strong><br>
+
+            (555) 867-5309
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Email:</strong><br>
+
+            bookings@lilfishcc.com
+        </p>
+
+        <br>
+
+        
+        </a>
+
+    </div>
+
+</section>
+
+<!-- BOOKING FORM -->
+<form>
+
+    <h2 style="text-align:center; margin-bottom:20px;">
+
+        Booking Inquiry
+
+    </h2>
+
+    <input type="text"
+           placeholder="Your Name">
+
+    <input type="email"
+           placeholder="Your Email">
+
+    <textarea rows="6"
+              placeholder="Tell us about your event"></textarea>
+
+    <button type="submit">
+
+        Submit Inquiry
+
+    </button>
+
+</form>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <a href="#">
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-brands fa-x-twitter"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+    </div>
+
+    <p>
+
+        © 2026 Lil Fish Community Center
+
+    </p>
+
+</footer>
+
+</body>
+</html>

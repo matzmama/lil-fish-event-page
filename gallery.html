@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Lil Fish Community Center</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>
+
+        Lil Fish Community Center
+
+    </h1>
+
+   <nav>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="events.html">Events</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+
+            Gallery & Event Highlights
+
+        </h2>
+
+        <p>
+
+            Celebrating weddings,
+            concerts,
+            festivals,
+            and unforgettable community moments.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- HARVEST FESTIVAL -->
+<section class="gallery-section">
+
+    <h2 class="section-title">
+
+        Harvest Festival 2026
+
+    </h2>
+
+    <div class="gallery-grid">
+
+        <img src="images/harvest1.png"
+             alt="Harvest Festival">
+
+        <img src="images/harvest2.png"
+             alt="Harvest Festival">
+
+        <img src="images/harvest3.png"
+             alt="Harvest Festival">
+
+    </div>
+
+</section>
+
+<!-- WINTER MARKET -->
+<section class="gallery-section">
+
+    <h2 class="section-title">
+
+        Winter Market 2025
+
+    </h2>
+
+    <div class="gallery-grid">
+
+        <img src="images/winter1.png"
+             alt="Winter Market">
+
+        <img src="images/winter2.png"
+             alt="Winter Market">
+
+        <img src="images/winter3.png"
+             alt="Winter Market">
+
+    </div>
+
+</section>
+
+<!-- LIVE MUSIC -->
+<section class="gallery-section">
+
+    <h2 class="section-title">
+
+        Live Music & Concerts
+
+    </h2>
+
+    <div class="gallery-grid">
+
+        <img src="images/band1.png"
+             alt="Live Music">
+
+        <img src="images/band2.png"
+             alt="Live Music">
+
+        <img src="images/band3.png"
+             alt="Live Music">
+
+    </div>
+
+</section>
+
+<!-- WEDDINGS -->
+<section class="gallery-section">
+
+    <h2 class="section-title">
+
+        Weddings & Celebrations
+
+    </h2>
+
+    <div class="gallery-grid">
+
+        <img src="images/wedding1.png"
+             alt="Wedding">
+
+        <img src="images/wedding2.png"
+             alt="Wedding">
+
+        <img src="images/wedding3.png"
+             alt="Wedding">
+
+    </div>
+
+</section>
+
+<!-- LIGHTBOX MODAL -->
+<div id="lightbox"
+     class="lightbox">
+
+    <span class="close-lightbox">
+
+        &times;
+
+    </span>
+
+    <img class="lightbox-content"
+         id="lightbox-img">
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+    </div>
+
+    <p>
+
+        © 2026 Lil Fish Community Center
+
+    </p>
+
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button onclick="topFunction()"
+        id="topBtn"
+        title="Go to top">
+
+    ↑
+
+</button>
+
+<script>
+
+    // SHOW BUTTON WHEN SCROLLING
+    window.onscroll = function() {
+
+        scrollFunction();
+
+    };
+
+    function scrollFunction() {
+
+        if (
+            document.body.scrollTop > 300 ||
+            document.documentElement.scrollTop > 300
+        ) {
+
+            document.getElementById("topBtn").style.display = "block";
+
+        } else {
+
+            document.getElementById("topBtn").style.display = "none";
+        }
+    }
+
+    // SCROLL TO TOP
+    function topFunction() {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+        });
+    }
+
+</script>
+<script>
+
+    // GET ALL GALLERY IMAGES
+    const galleryImages =
+        document.querySelectorAll(".gallery-grid img");
+
+    // GET LIGHTBOX ELEMENTS
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImg =
+        document.getElementById("lightbox-img");
+
+    const closeLightbox =
+        document.querySelector(".close-lightbox");
+
+    // OPEN LIGHTBOX
+    galleryImages.forEach(image => {
+
+        image.addEventListener("click", () => {
+
+            lightbox.style.display = "flex";
+
+            lightboxImg.src = image.src;
+
+// REMOVE OLD CLASSES
+lightboxImg.classList.remove(
+    "portrait",
+    "landscape"
+);
+
+// DETECT IMAGE ORIENTATION
+if (image.naturalHeight > image.naturalWidth) {
+
+    lightboxImg.classList.add("portrait");
+
+} else {
+
+    lightboxImg.classList.add("landscape");
+}
+        });
+    });
+
+    // CLOSE LIGHTBOX
+    closeLightbox.addEventListener("click", () => {
+
+        lightbox.style.display = "none";
+    });
+
+    // CLOSE WHEN CLICKING OUTSIDE IMAGE
+    lightbox.addEventListener("click", (e) => {
+
+        if (e.target !== lightboxImg) {
+
+            lightbox.style.display = "none";
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
