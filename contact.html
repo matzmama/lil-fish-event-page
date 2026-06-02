@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- FONT AWESOME -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <head>
 
     <meta charset="UTF-8">
@@ -22,6 +20,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet"
@@ -78,6 +80,9 @@
     </style>
 
 </head>
+
+<body>
+
 <!-- BACK TO TOP BUTTON -->
 <button onclick="topFunction()"
         id="topBtn"
@@ -87,76 +92,60 @@
 
 </button>
 
-<script>
-
-    // SHOW BUTTON WHEN SCROLLING
-    window.onscroll = function() {
-
-        scrollFunction();
-
-    };
-
-    function scrollFunction() {
-
-        if (
-            document.body.scrollTop > 300 ||
-            document.documentElement.scrollTop > 300
-        ) {
-
-            document.getElementById("topBtn").style.display = "block";
-
-        } else {
-
-            document.getElementById("topBtn").style.display = "none";
-        }
-    }
-
-    // SCROLL TO TOP
-    function topFunction() {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-        });
-    }
-
-</script>
-<body>
-
 <!-- HEADER -->
 <header>
 
-    <h1>Lil Fish Community Center</h1>
+    <h1>
 
-   <nav>
+        Lil Fish Community Center
 
-    <ul>
+    </h1>
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+    <!-- HAMBURGER ICON -->
+    <div class="hamburger"
+         id="hamburger">
 
-        <li>
-            <a href="about.html">About</a>
-        </li>
+        ☰
 
-        <li>
-            <a href="events.html">Events</a>
-        </li>
+    </div>
 
-        <li>
-            <a href="gallery.html">Gallery</a>
-        </li>
+    <!-- THEME BUTTON -->
+    <button id="themeToggle"
+            class="theme-toggle">
 
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
+        🌙
 
-    </ul>
+    </button>
 
-</nav>
+    <!-- NAVIGATION -->
+    <nav>
+
+        <ul id="navLinks">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
 </header>
 
 <!-- CONTACT HERO -->
@@ -187,7 +176,7 @@
 
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT INFO -->
 <section class="about-section">
 
     <div class="about-text">
@@ -195,40 +184,41 @@
         <h2>Contact Us</h2>
 
         <p>
+
             <strong>Address:</strong><br>
 
             102 Riverbend Lane<br>
 
             Lil Fish, Oregon 97211
+
         </p>
 
         <br>
 
         <p>
+
             <strong>Phone:</strong><br>
 
             (555) 867-5309
+
         </p>
 
         <br>
 
         <p>
+
             <strong>Email:</strong><br>
 
             bookings@lilfishcc.com
+
         </p>
-
-        <br>
-
-        
-        </a>
 
     </div>
 
 </section>
 
 <!-- BOOKING FORM -->
-<form>
+<section class="contact-form-section">
 
     <h2 style="text-align:center; margin-bottom:20px;">
 
@@ -236,24 +226,36 @@
 
     </h2>
 
-    <input type="text"
-           placeholder="Your Name">
+    <form id="contactForm">
 
-    <input type="email"
-           placeholder="Your Email">
+        <input type="text"
+               id="name"
+               placeholder="Your Name"
+               required>
 
-    <textarea rows="6"
-              placeholder="Tell us about your event"></textarea>
+        <input type="email"
+               id="email"
+               placeholder="Your Email"
+               required>
 
-    <button type="submit">
+        <textarea id="message"
+                  rows="6"
+                  placeholder="Tell us about your event"
+                  required></textarea>
 
-        Submit Inquiry
+        <button type="submit"
+                class="btn">
 
-    </button>
+            Submit Inquiry
 
-</form>
+        </button>
 
-<!-- FOOTER -->
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
 <!-- FOOTER -->
 <footer>
 
@@ -286,6 +288,9 @@
     </p>
 
 </footer>
+
+<!-- JAVASCRIPT -->
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -30,6 +30,9 @@
           href="style.css">
 
 </head>
+
+<body>
+
 <!-- BACK TO TOP BUTTON -->
 <button onclick="topFunction()"
         id="topBtn"
@@ -38,44 +41,6 @@
     ↑
 
 </button>
-
-<script>
-
-    // SHOW BUTTON WHEN SCROLLING
-    window.onscroll = function() {
-
-        scrollFunction();
-
-    };
-
-    function scrollFunction() {
-
-        if (
-            document.body.scrollTop > 300 ||
-            document.documentElement.scrollTop > 300
-        ) {
-
-            document.getElementById("topBtn").style.display = "block";
-
-        } else {
-
-            document.getElementById("topBtn").style.display = "none";
-        }
-    }
-
-    // SCROLL TO TOP
-    function topFunction() {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-        });
-    }
-
-</script>
-<body>
 
 <!-- HEADER -->
 <header>
@@ -86,37 +51,41 @@
 
     </h1>
 
-    <nav>
-<nav class="navbar">
-   
-    <button class="hamburger" id="hamburger">
-        ☰
-    </button>
+    <nav class="navbar">
 
-    <ul class="nav-links" id="navLinks">
+       <!-- HAMBURGER ICON -->
+<div class="hamburger"
+     id="hamburger">
 
-    <li>
-        <a href="index.html">Home</a>
-    </li>
+    ☰
 
-    <li>
-        <a href="about.html">About</a>
-    </li>
+</div>
 
-    <li>
-        <a href="events.html">Events</a>
-    </li>
+<!-- DARK MODE BUTTON -->
+<button id="themeToggle"
+        class="theme-toggle">
 
-    <li>
-        <a href="gallery.html">Gallery</a>
-    </li>
+    🌙
 
-    <li>
-        <a href="contact.html">Contact</a>
-    </li>
+</button>
 
-</ul>
-</nav>
+<nav>
+        <ul class="nav-links"
+            id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="events.html">Events</a></li>
+
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
@@ -175,26 +144,15 @@
 
                     <div class="card-content">
 
-                        <h3>
-
-                            Harvest Festival
-
-                        </h3>
+                        <h3>Harvest Festival</h3>
 
                         <p>
 
                             Hayrides, pumpkins,
-                            local vendors, and
-                            live entertainment.
+                            local vendors,
+                            and live entertainment.
 
                         </p>
-
-                        <a href="#"
-                           class="btn">
-
-                           Vendor Info Here
-
-                        </a>
 
                     </div>
 
@@ -203,23 +161,11 @@
                 <!-- BACK -->
                 <div class="flip-card-back">
 
-                    <h3>
+                    <h3>Vendor Information</h3>
 
-                        Vendor Information
+                    <p>Booth Fee: $75</p>
 
-                    </h3>
-
-                    <p>
-
-                        Booth Fee: $75
-
-                    </p>
-
-                    <p>
-
-                        10x10 vendor space included.
-
-                    </p>
+                    <p>10x10 vendor space included.</p>
 
                     <p>
 
@@ -230,6 +176,13 @@
                         and seasonal decor.
 
                     </p>
+
+                    <a href="contact.html"
+                       class="btn">
+
+                       Apply As Vendor
+
+                    </a>
 
                 </div>
 
@@ -250,11 +203,7 @@
 
                     <div class="card-content">
 
-                        <h3>
-
-                            Holiday Market
-
-                        </h3>
+                        <h3>Holiday Market</h3>
 
                         <p>
 
@@ -265,13 +214,6 @@
 
                         </p>
 
-                        <a href="#"
-                           class="btn">
-
-                           Vendor Info Here
-
-                        </a>
-
                     </div>
 
                 </div>
@@ -279,23 +221,11 @@
                 <!-- BACK -->
                 <div class="flip-card-back">
 
-                    <h3>
+                    <h3>Vendor Information</h3>
 
-                        Vendor Information
+                    <p>Booth Fee: $100</p>
 
-                    </h3>
-
-                    <p>
-
-                        Booth Fee: $100
-
-                    </p>
-
-                    <p>
-
-                        Indoor vendor spaces included.
-
-                    </p>
+                    <p>Indoor vendor spaces included.</p>
 
                     <p>
 
@@ -306,6 +236,13 @@
                         and local makers.
 
                     </p>
+
+                    <a href="contact.html"
+                       class="btn">
+
+                       Apply As Vendor
+
+                    </a>
 
                 </div>
 
@@ -330,14 +267,11 @@
 
         <p>
 
-            Interested in becoming a vendor at one of our
-            seasonal events?
+            Applications for the Harvest Festival
+            and Holiday Market are now open.
 
-            Applications for the Harvest Festival and
-            Holiday Market are now open.
-
-            Vendor registration closes 30 days before
-            each event date.
+            Vendor registration closes 30 days
+            before each event.
 
         </p>
 
@@ -378,6 +312,8 @@
     </p>
 
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

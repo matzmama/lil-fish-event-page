@@ -41,34 +41,52 @@
         Lil Fish Community Center
 
     </h1>
+<!-- HAMBURGER ICON -->
+<div class="hamburger"
+     id="hamburger">
 
-   <nav>
+    ☰
 
-    <ul>
+</div>
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+<!-- DARK MODE BUTTON -->
+<button id="themeToggle"
+        class="theme-toggle">
 
-        <li>
-            <a href="about.html">About</a>
-        </li>
+    🌙
 
-        <li>
-            <a href="events.html">Events</a>
-        </li>
+</button>
 
-        <li>
-            <a href="gallery.html">Gallery</a>
-        </li>
+<nav>
 
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
 
-    </ul>
+    <nav>
 
-</nav>
+        <ul id="navLinks">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
@@ -243,102 +261,7 @@
 
 </button>
 
-<script>
-
-    // SHOW BUTTON WHEN SCROLLING
-    window.onscroll = function() {
-
-        scrollFunction();
-
-    };
-
-    function scrollFunction() {
-
-        if (
-            document.body.scrollTop > 300 ||
-            document.documentElement.scrollTop > 300
-        ) {
-
-            document.getElementById("topBtn").style.display = "block";
-
-        } else {
-
-            document.getElementById("topBtn").style.display = "none";
-        }
-    }
-
-    // SCROLL TO TOP
-    function topFunction() {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-        });
-    }
-
-</script>
-<script>
-
-    // GET ALL GALLERY IMAGES
-    const galleryImages =
-        document.querySelectorAll(".gallery-grid img");
-
-    // GET LIGHTBOX ELEMENTS
-    const lightbox =
-        document.getElementById("lightbox");
-
-    const lightboxImg =
-        document.getElementById("lightbox-img");
-
-    const closeLightbox =
-        document.querySelector(".close-lightbox");
-
-    // OPEN LIGHTBOX
-    galleryImages.forEach(image => {
-
-        image.addEventListener("click", () => {
-
-            lightbox.style.display = "flex";
-
-            lightboxImg.src = image.src;
-
-// REMOVE OLD CLASSES
-lightboxImg.classList.remove(
-    "portrait",
-    "landscape"
-);
-
-// DETECT IMAGE ORIENTATION
-if (image.naturalHeight > image.naturalWidth) {
-
-    lightboxImg.classList.add("portrait");
-
-} else {
-
-    lightboxImg.classList.add("landscape");
-}
-        });
-    });
-
-    // CLOSE LIGHTBOX
-    closeLightbox.addEventListener("click", () => {
-
-        lightbox.style.display = "none";
-    });
-
-    // CLOSE WHEN CLICKING OUTSIDE IMAGE
-    lightbox.addEventListener("click", (e) => {
-
-        if (e.target !== lightboxImg) {
-
-            lightbox.style.display = "none";
-        }
-    });
-
-</script>
-
+<script src="js/script.js"></script>
 
 </body>
 </html>

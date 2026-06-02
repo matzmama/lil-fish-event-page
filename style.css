@@ -99,29 +99,673 @@ nav a:hover {
     font-size: 20px;
     cursor: pointer;
 }
+/* =========================
+   MOBILE NAVIGATION
+========================= */
 
-/* MOBILE */
+/* =========================
+   DARK MODE TOGGLE
+========================= */
+
+.theme-toggle {
+
+    background-color: #D4AF37;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+
+    transition: 0.3s ease;
+
+    margin-left: 15px;
+}
+
+.theme-toggle:hover {
+
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   ✨ SIGNATURE THEME
+===================================================== */
+
+body.default-theme {
+
+    background-color: #ffffff;
+
+    color: #001633;
+
+    transition: 0.4s ease;
+}
+
+/* =====================================================
+   🌸 SPRING ELEGANCE THEME
+===================================================== */
+
+body.spring-theme {
+
+    background-color: #F8F5F0;
+
+    color: #2B3440;
+
+    transition: 0.4s ease;
+}
+
+body.spring-theme header {
+
+    background-color: #EFE7DD;
+
+    border-bottom: 1px solid rgba(200, 169, 107, 0.25);
+}
+
+body.spring-theme .hero {
+
+    background-color: #F8F5F0;
+}
+
+body.spring-theme .hero::before {
+
+    background: rgba(43, 52, 64, 0.20);
+}
+
+body.spring-theme h1,
+body.spring-theme h2,
+body.spring-theme h3 {
+
+    color: #2B3440;
+}
+
+body.spring-theme p {
+
+    color: #4A5563;
+}
+
+body.spring-theme .card {
+
+    background-color: #FFFDF9;
+
+    border: 1px solid rgba(200, 169, 107, 0.18);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+body.spring-theme section {
+
+    background-color: #F8F5F0;
+}
+
+body.spring-theme .btn {
+
+    background-color: #C8A96B;
+
+    color: white;
+}
+
+body.spring-theme .btn:hover {
+
+    background-color: #D9B8A7;
+
+    transform: translateY(-2px);
+}
+
+body.spring-theme footer {
+
+    background-color: #EFE7DD;
+}
+
+body.spring-theme nav ul li a {
+
+    color: #2B3440;
+}
+
+body.spring-theme nav ul li a.active-page {
+
+    color: #C8A96B !important;
+
+    border-bottom: 2px solid #C8A96B;
+}
+
+/* =====================================================
+   ☀️ SUMMER COASTAL THEME
+===================================================== */
+
+body.summer-theme {
+
+    background-color: #F5F7F4;
+
+    color: #2D3B3A;
+
+    transition: 0.4s ease;
+}
+
+body.summer-theme header {
+
+    background-color: #DCE7E1;
+}
+
+body.summer-theme .hero {
+
+    background-color: #F5F7F4;
+}
+
+body.summer-theme .hero::before {
+
+    background: rgba(45, 59, 58, 0.18);
+}
+
+body.summer-theme h1,
+body.summer-theme h2,
+body.summer-theme h3 {
+
+    color: #2D3B3A;
+}
+
+body.summer-theme p {
+
+    color: #4B5B5A;
+}
+
+body.summer-theme .card {
+
+    background-color: #FFFFFF;
+
+    border: 1px solid rgba(125, 166, 161, 0.20);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+body.summer-theme section {
+
+    background-color: #F5F7F4;
+}
+
+body.summer-theme .btn {
+
+    background-color: #7DA6A1;
+
+    color: white;
+}
+
+body.summer-theme .btn:hover {
+
+    background-color: #9FC2BD;
+}
+
+body.summer-theme footer {
+
+    background-color: #DCE7E1;
+}
+
+body.summer-theme nav ul li a {
+
+    color: #2D3B3A;
+}
+
+body.summer-theme nav ul li a.active-page {
+
+    color: #7DA6A1 !important;
+
+    border-bottom: 2px solid #7DA6A1;
+}
+
+/* =====================================================
+   🍂 AUTUMN HARVEST THEME
+===================================================== */
+
+body.autumn-theme {
+
+    background-color: #F6F1EA;
+
+    color: #34231F;
+
+    transition: 0.4s ease;
+}
+
+/* HEADER */
+
+body.autumn-theme header {
+
+    background-color: #4B2E2A;
+}
+
+/* HEADER TITLE */
+
+body.autumn-theme header h1 {
+
+    color: #FFF8F0;
+}
+
+/* HERO */
+
+body.autumn-theme .hero {
+
+    background-color: #F6F1EA;
+}
+
+/* HERO OVERLAY */
+
+body.autumn-theme .hero::before {
+
+    background: rgba(52, 35, 31, 0.28);
+}
+
+/* HERO TEXT */
+
+body.autumn-theme .hero h2,
+body.autumn-theme .hero p {
+
+    color: #FFF8F0;
+}
+
+/* HEADINGS */
+
+body.autumn-theme h1,
+body.autumn-theme h2,
+body.autumn-theme h3 {
+
+    color: #34231F;
+}
+
+/* PARAGRAPHS */
+
+body.autumn-theme p {
+
+    color: #5B463F;
+}
+
+/* CARDS */
+
+body.autumn-theme .card {
+
+    background-color: #FFF9F3;
+
+    border: 1px solid rgba(163, 92, 61, 0.18);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* SECTIONS */
+
+body.autumn-theme section {
+
+    background-color: #F6F1EA;
+}
+
+/* BUTTONS */
+
+body.autumn-theme .btn {
+
+    background-color: #A35C3D;
+
+    color: white;
+}
+
+/* BUTTON HOVER */
+
+body.autumn-theme .btn:hover {
+
+    background-color: #C77A58;
+}
+
+/* FOOTER */
+
+body.autumn-theme footer {
+
+    background-color: #4B2E2A;
+}
+
+/* NAVIGATION */
+
+body.autumn-theme nav ul li a {
+
+    color: #FFF8F0;
+
+    font-weight: 600;
+}
+
+/* ACTIVE PAGE */
+
+body.autumn-theme nav ul li a.active-page {
+
+    color: #D9B06F !important;
+
+    border-bottom: 2px solid #D9B06F;
+}
+/* =====================================================
+   ❄️ WINTER GALA THEME
+===================================================== */
+
+body.winter-theme {
+
+    background-color: #EDEFF2;
+
+    color: #243447;
+
+    transition: 0.4s ease;
+}
+
+/* HEADER */
+
+body.winter-theme header {
+
+    background-color: #1E293B;
+}
+
+/* HEADER TITLE */
+
+body.winter-theme header h1 {
+
+    color: #F8FAFC;
+}
+
+/* HERO */
+
+body.winter-theme .hero {
+
+    background-color: #EDEFF2;
+}
+
+/* HERO OVERLAY */
+
+body.winter-theme .hero::before {
+
+    background: rgba(36, 52, 71, 0.30);
+}
+
+/* HERO TEXT */
+
+body.winter-theme .hero h2,
+body.winter-theme .hero p {
+
+    color: white;
+}
+
+/* HEADINGS */
+
+body.winter-theme h1,
+body.winter-theme h2,
+body.winter-theme h3 {
+
+    color: #243447;
+}
+
+/* PARAGRAPHS */
+
+body.winter-theme p {
+
+    color: #4A6075;
+}
+
+/* CARDS */
+
+body.winter-theme .card {
+
+    background-color: #FFFFFF;
+
+    border: 1px solid rgba(159, 183, 201, 0.18);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* SECTIONS */
+
+body.winter-theme section {
+
+    background-color: #EDEFF2;
+}
+
+/* BUTTONS */
+
+body.winter-theme .btn {
+
+    background-color: #9FB7C9;
+
+    color: white;
+}
+
+/* BUTTON HOVER */
+
+body.winter-theme .btn:hover {
+
+    background-color: #BCD0DE;
+}
+
+/* FOOTER */
+
+body.winter-theme footer {
+
+    background-color: #1E293B;
+}
+
+/* NAVIGATION */
+
+body.winter-theme nav ul li a {
+
+    color: #F8FAFC;
+
+    font-weight: 600;
+}
+
+/* ACTIVE PAGE */
+
+body.winter-theme nav ul li a.active-page {
+
+    color: #9FB7C9 !important;
+
+    border-bottom: 2px solid #9FB7C9;
+}
+/* =====================================================
+   🎶 CONCERT NIGHTS THEME
+===================================================== */
+
+body.concert-theme {
+
+    background-color: #111318;
+
+    color: #F3F4F6;
+
+    transition: 0.4s ease;
+}
+
+body.concert-theme header {
+
+    background-color: #1B1F27;
+}
+
+body.concert-theme .hero {
+
+    background-color: #111318;
+}
+
+body.concert-theme .hero::before {
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+body.concert-theme h1,
+body.concert-theme h2,
+body.concert-theme h3 {
+
+    color: #F3F4F6;
+}
+
+body.concert-theme p {
+
+    color: #D1D5DB;
+}
+
+body.concert-theme .card {
+
+    background-color: #1F2430;
+
+    border: 1px solid rgba(139, 92, 246, 0.18);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.concert-theme section {
+
+    background-color: #111318;
+}
+
+body.concert-theme .btn {
+
+    background-color: #8B5CF6;
+
+    color: white;
+}
+
+body.concert-theme .btn:hover {
+
+    background-color: #A78BFA;
+}
+
+body.concert-theme footer {
+
+    background-color: #1B1F27;
+}
+
+body.concert-theme nav ul li a {
+
+    color: #F3F4F6;
+}
+
+body.concert-theme nav ul li a.active-page {
+
+    color: #8B5CF6 !important;
+
+    border-bottom: 2px solid #8B5CF6;
+}
 @media (max-width: 768px) {
 
-    .hamburger {
-        display: block;
-    }
+    header {
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        background: #001633;
+        position: relative;
+
         padding: 20px;
-        border-radius: 10px;
     }
 
-    .nav-links.show {
+    .hamburger {
+
+        display: block;
+
+        background-color: #D4AF37;
+
+        color: white;
+
+        padding: 12px 16px;
+
+        border-radius: 10px;
+
+        font-size: 1.8rem;
+
+        cursor: pointer;
+
+        position: absolute;
+
+        top: 30px;
+
+        right: 20px;
+
+        z-index: 1001;
+    }
+
+    nav ul {
+
+        display: none;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        top: 100px;
+
+        right: 20px;
+
+        background-color: #001633;
+
+        padding: 30px;
+
+        border-radius: 20px;
+
+        gap: 25px;
+
+        width: 220px;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+        z-index: 1000;
+    }
+
+    nav ul.show {
+
         display: flex;
     }
+
+    nav ul li a {
+
+        color: white;
+
+        font-size: 1.4rem;
+    }
+
+    nav ul li a {
+
+        color: white;
+
+        font-size: 1.4rem;
+
+    }
+
+    .theme-toggle {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 90px;
 }
+
+}
+
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+nav ul li a {
+
+    color: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+
+    color: #D6B36A;
+}
+
+/* ACTIVE PAGE */
+
+nav ul li a.active-page {
+
+    color: #D6B36A !important;
+
+    border-bottom: 2px solid #D6B36A;
+
+    padding-bottom: 5px;
+
+    font-weight: 600;
+}
+
 /* =========================
    HERO SECTION
 ========================= */
@@ -188,6 +832,62 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.20);
 
     margin-bottom: 30px;
+}
+
+/* =========================
+   FORM VALIDATION
+========================= */
+
+.error {
+
+    border: 2px solid #d9534f !important;
+}
+
+.success {
+
+    border: 2px solid #5cb85c !important;
+}
+
+#formMessage {
+
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    font-size: 1rem;
+}
+
+/* HERO BUTTON GROUP */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 20px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+/* SECONDARY BUTTONS */
+
+.secondary-btn {
+
+    background-color: transparent;
+
+    border: 2px solid #D6B36A;
+
+    color: #D6B36A;
+}
+
+.secondary-btn:hover {
+
+    background-color: #D6B36A;
+
+    color: #001633;
 }
 
 /* =========================
@@ -677,6 +1377,52 @@ button:hover {
    FOOTER
 ========================= */
 
+/* FILTER BUTTONS */
+
+.filter-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+
+    background-color: #D6B36A;
+
+    color: #0B1F33;
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.filter-btn:hover {
+
+    background-color: #f0cf87;
+
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+
+    background-color: white;
+}
+
 footer {
 
     background-color: #081421;
@@ -912,6 +1658,28 @@ footer {
 }
 
 /* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================
    MOBILE RESPONSIVE
 ========================= */
 
@@ -939,6 +1707,14 @@ footer {
     .hero p {
 
         font-size: 1rem;
+    }
+
+    .hero-buttons {
+
+    flex-direction: column;
+
+    align-items: center;
+
     }
 
     .card-container {

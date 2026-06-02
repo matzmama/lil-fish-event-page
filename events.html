@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- FONT AWESOME -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <head>
 
     <meta charset="UTF-8">
@@ -23,11 +21,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
 
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet"
           href="style.css">
 
 </head>
+
+<body>
+
 <!-- BACK TO TOP BUTTON -->
 <button onclick="topFunction()"
         id="topBtn"
@@ -37,79 +42,64 @@
 
 </button>
 
-<script>
-
-    // SHOW BUTTON WHEN SCROLLING
-    window.onscroll = function() {
-
-        scrollFunction();
-
-    };
-
-    function scrollFunction() {
-
-        if (
-            document.body.scrollTop > 300 ||
-            document.documentElement.scrollTop > 300
-        ) {
-
-            document.getElementById("topBtn").style.display = "block";
-
-        } else {
-
-            document.getElementById("topBtn").style.display = "none";
-        }
-    }
-
-    // SCROLL TO TOP
-    function topFunction() {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-        });
-    }
-
-</script>
-<body>
-
 <!-- HEADER -->
 <header>
 
-    <h1>Lil Fish Community Center</h1>
+    <h1>
+
+        Lil Fish Community Center
+
+    </h1>
+
+<!-- HAMBURGER ICON -->
+<div class="hamburger"
+     id="hamburger">
+
+    ☰
+
+</div>
+
+<!-- DARK MODE BUTTON -->
+<button id="themeToggle"
+        class="theme-toggle">
+
+    🌙
+
+</button>
+
+<nav>
 
     <nav>
 
-    <ul>
+        <ul id="navLinks">
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-        <li>
-            <a href="about.html">About</a>
-        </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
-        <li>
-            <a href="events.html">Events</a>
-        </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
 
-        <li>
-            <a href="gallery.html">Gallery</a>
-        </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
 
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
 
-    </ul>
+        </ul>
 
-</nav>
+    </nav>
+
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
 
     <div class="hero-content">
@@ -122,19 +112,39 @@
 
         <p>
 
-            Weddings, graduations, retirement parties,
-            concerts, anniversary celebrations,
-            seasonal festivals, and unforgettable
-            community gatherings.
+            Weddings, concerts,
+            retirement parties,
+            graduations,
+            seasonal festivals,
+            and unforgettable community events.
 
         </p>
 
-        <a href="#upcoming-events"
-           class="btn">
+        <!-- HERO BUTTON GROUP -->
+        <div class="hero-buttons">
 
-           Upcoming Events
+            <a href="#upcoming-events"
+               class="btn">
 
-        </a>
+               Upcoming Events
+
+            </a>
+
+            <a href="#event-archive"
+               class="btn secondary-btn">
+
+               Event Archive
+
+            </a>
+
+            <a href="#streaming-hub"
+               class="btn secondary-btn">
+
+               Streaming Hub
+
+            </a>
+
+        </div>
 
     </div>
 
@@ -142,7 +152,7 @@
 
 <!-- UPCOMING EVENTS -->
 <section id="upcoming-events"
-         class="upcoming-events">
+         class="upcoming-events reveal">
 
     <h2>
 
@@ -152,275 +162,275 @@
 
     <div class="event-list">
 
-        <!-- EVENT -->
+        <!-- GRADUATION -->
         <div class="event-item">
 
             <h3>
+
                 Class of 2026 Graduation Celebration
+
             </h3>
 
             <p>
+
                 <strong>Date:</strong>
                 May 30, 2026
+
             </p>
 
             <p>
+
                 <strong>Time:</strong>
                 5 PM – 10 PM
+
             </p>
 
             <p>
+
                 <strong>Event Type:</strong>
                 Public Event
+
             </p>
 
+            <div class="countdown"
+                 data-date="2026-05-30T17:00:00">
+
+            </div>
+
             <p>
-                <strong>Details:</strong>
+
                 Celebrate the graduating Class of 2026
-                with music, dinner, awards,
+                with music, awards,
+                family dining,
                 and community recognition.
+
             </p>
 
         </div>
 
-        <!-- EVENT -->
+        <!-- WEDDING -->
         <div class="event-item">
 
             <h3>
+
                 Paulson Wedding
+
             </h3>
 
             <p>
+
                 <strong>Date:</strong>
                 June 5, 2026
+
             </p>
 
             <p>
+
                 <strong>Time:</strong>
                 4 PM – 11 PM
+
             </p>
 
             <p>
+
                 <strong>Event Type:</strong>
                 Private Event
+
             </p>
 
+            <div class="countdown"
+                 data-date="2026-06-05T16:00:00">
+
+            </div>
+
             <p>
-                <strong>Details:</strong>
-                Wedding Ceremony & Reception
+
+                Wedding ceremony
+                and reception celebration.
+
             </p>
 
         </div>
 
-        <!-- EVENT -->
+        <!-- ANNIVERSARY -->
         <div class="event-item">
 
             <h3>
-                Peterman Wedding
+
+                Wilson Anniversary Celebration
+
             </h3>
 
             <p>
-                <strong>Date:</strong>
-                June 12, 2026
-            </p>
 
-            <p>
-                <strong>Time:</strong>
-                4 PM – 11 PM
-            </p>
-
-            <p>
-                <strong>Event Type:</strong>
-                Private Event
-            </p>
-
-            <p>
-                <strong>Details:</strong>
-                Wedding Ceremony & Reception
-            </p>
-
-        </div>
-
-        <!-- EVENT -->
-        <div class="event-item">
-
-            <h3>
-                Wilson Anniversary Party
-            </h3>
-
-            <p>
                 <strong>Date:</strong>
                 June 19, 2026
+
             </p>
 
             <p>
+
                 <strong>Time:</strong>
                 5 PM – 10 PM
+
             </p>
 
             <p>
+
                 <strong>Event Type:</strong>
                 Private Event
+
             </p>
 
+            <div class="countdown"
+                 data-date="2026-06-19T17:00:00">
+
+            </div>
+
             <p>
-                <strong>Details:</strong>
-                Anniversary Celebration & Dinner
+
+                Elegant anniversary dinner
+                and evening celebration.
+
             </p>
 
         </div>
 
-        <!-- EVENT -->
+        <!-- SUMMER JAM -->
         <div class="event-item">
 
             <h3>
-                Sanderson Wedding
+
+                Summer Jam Concert
+
             </h3>
 
             <p>
-                <strong>Date:</strong>
-                July 11, 2026
-            </p>
 
-            <p>
-                <strong>Time:</strong>
-                4 PM – 11 PM
-            </p>
-
-            <p>
-                <strong>Event Type:</strong>
-                Private Event
-            </p>
-
-            <p>
-                <strong>Details:</strong>
-                Wedding Ceremony & Reception
-            </p>
-
-        </div>
-
-        <!-- EVENT -->
-        <div class="event-item">
-
-            <h3>
-                Summer Jam Band
-            </h3>
-
-            <p>
                 <strong>Date:</strong>
                 July 25, 2026
+
             </p>
 
             <p>
+
                 <strong>Time:</strong>
                 7 PM – 11 PM
+
             </p>
 
             <p>
+
                 <strong>Event Type:</strong>
                 Public Event
+
             </p>
 
+            <div class="countdown"
+                 data-date="2026-07-25T19:00:00">
+
+            </div>
+
             <p>
-                <strong>Details:</strong>
-                Live outdoor music featuring local bands,
-                food vendors, dancing,
+
+                Live music,
+                dancing,
+                food vendors,
                 and family entertainment.
+
             </p>
 
         </div>
 
-        <!-- EVENT -->
+        <!-- HARVEST -->
         <div class="event-item">
 
             <h3>
-                Drive-In Movie Night
-            </h3>
 
-            <p>
-                <strong>Date:</strong>
-                August 21, 2026
-            </p>
-
-            <p>
-                <strong>Time:</strong>
-                8 PM – Midnight
-            </p>
-
-            <p>
-                <strong>Event Type:</strong>
-                Public Event
-            </p>
-
-            <p>
-                <strong>Details:</strong>
-                Outdoor family movie night featuring
-                concessions, lawn seating,
-                and classic summer films.
-            </p>
-
-        </div>
-
-        <!-- EVENT -->
-        <div class="event-item">
-
-            <h3>
                 Harvest Festival
+
             </h3>
 
             <p>
+
                 <strong>Date:</strong>
-                Every Saturday
-                September – October 2026
+                Saturdays September – October 2026
+
             </p>
 
             <p>
+
                 <strong>Time:</strong>
                 10 AM – 6 PM
+
             </p>
 
             <p>
+
                 <strong>Event Type:</strong>
                 Public Community Event
+
             </p>
 
+            <div class="countdown"
+                 data-date="2026-09-05T10:00:00">
+
+            </div>
+
             <p>
-                <strong>Details:</strong>
-                Hayrides, pumpkins, live music,
-                food vendors, craft booths,
+
+                Hayrides,
+                pumpkins,
+                craft vendors,
+                live music,
                 and family activities.
+
             </p>
 
         </div>
 
-        <!-- EVENT -->
+        <!-- HOLIDAY MARKET -->
         <div class="event-item">
 
             <h3>
+
                 Holiday Market
+
             </h3>
 
             <p>
+
                 <strong>Date:</strong>
-                Every Saturday
-                November – December 23, 2026
+                Saturdays November – December 2026
+
             </p>
 
             <p>
+
                 <strong>Time:</strong>
                 11 AM – 7 PM
+
             </p>
 
             <p>
+
                 <strong>Event Type:</strong>
                 Public Community Event
+
             </p>
 
+            <div class="countdown"
+                 data-date="2026-11-07T11:00:00">
+
+            </div>
+
             <p>
-                <strong>Details:</strong>
-                Seasonal shopping, handmade gifts,
-                holiday treats, festive décor,
-                and local vendors.
+
+                Handmade gifts,
+                holiday treats,
+                seasonal décor,
+                and local shopping.
+
             </p>
 
         </div>
@@ -429,39 +439,77 @@
 
 </section>
 
-<!-- SEASONAL EVENTS -->
-<section class="seasonal-events">
+<!-- FEATURED EVENT TYPES -->
+<section id="event-archive"
+         class="seasonal-events reveal">
 
     <h2 class="section-title">
 
-        Seasonal Community Traditions
+        Featured Event Types
 
     </h2>
 
+    <!-- FILTER BUTTONS -->
+    <div class="filter-buttons">
+
+        <button class="filter-btn active"
+                data-filter="all">
+
+            All
+
+        </button>
+
+        <button class="filter-btn"
+                data-filter="wedding">
+
+            Weddings
+
+        </button>
+
+        <button class="filter-btn"
+                data-filter="concert">
+
+            Concerts
+
+        </button>
+
+        <button class="filter-btn"
+                data-filter="community">
+
+            Community
+
+        </button>
+
+        <button class="filter-btn"
+                data-filter="corporate">
+
+            Corporate
+
+        </button>
+
+    </div>
+
     <div class="card-container">
 
-        <!-- HARVEST FESTIVAL -->
-        <article class="card">
+        <!-- GRADUATION -->
+        <article class="card"
+                 data-category="community">
 
-            <img src="images/lil fish harvest festival.png"
-                 alt="Harvest Festival">
+            <img src="images/graduation.png"
+                 alt="Graduation Celebration">
 
             <div class="card-content">
 
-                <h3>Harvest Festival</h3>
+                <h3>
+
+                    Graduation Celebrations
+
+                </h3>
 
                 <p>
 
-                    Every Saturday
-                    September – October 2026
-
-                </p>
-
-                <p>
-
-                    Celebrate fall with pumpkins,
-                    hayrides, live music, local vendors,
-                    and family-friendly activities.
+                    Elegant graduation parties
+                    and milestone celebrations.
 
                 </p>
 
@@ -469,28 +517,80 @@
 
         </article>
 
-        <!-- HOLIDAY MARKET -->
-        <article class="card">
+        <!-- RETIREMENT -->
+        <article class="card"
+                 data-category="community">
 
-            <img src="images/Lil Fish Holiday market.png"
-                 alt="Holiday Market">
+            <img src="images/retirement.png"
+                 alt="Retirement Party">
 
             <div class="card-content">
 
-                <h3>Holiday Market</h3>
+                <h3>
+
+                    Retirement Parties
+
+                </h3>
 
                 <p>
 
-                    Every Saturday
-                    November – December 23, 2026
+                    Celebrate career milestones
+                    with unforgettable gatherings.
 
                 </p>
 
+            </div>
+
+        </article>
+
+        <!-- ANNIVERSARY -->
+        <article class="card"
+                 data-category="community">
+
+            <img src="images/anniversary.png"
+                 alt="Anniversary Celebration">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Anniversary Celebrations
+
+                </h3>
+
                 <p>
 
-                    Shop handcrafted gifts,
-                    seasonal treats, festive décor,
-                    and support local businesses.
+                    Elegant dinners,
+                    receptions,
+                    and family celebrations.
+
+                </p>
+
+            </div>
+
+        </article>
+
+        <!-- COMMUNITY -->
+        <article class="card"
+                 data-category="community">
+
+            <img src="images/community.png"
+                 alt="Community Events">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Community Gatherings
+
+                </h3>
+
+                <p>
+
+                    Festivals,
+                    reunions,
+                    concerts,
+                    and local traditions.
 
                 </p>
 
@@ -503,36 +603,48 @@
 </section>
 
 <!-- VENUE RENTALS -->
-<section class="featured-events">
+<section class="featured-events reveal">
 
     <h2 class="section-title">
 
-        Venue Rentals
+        Venue Rental Packages
 
     </h2>
 
     <div class="card-container">
 
-        <!-- WEDDINGS -->
-        <article class="card">
+        <!-- WEDDING -->
+        <article class="card"
+                 data-category="wedding">
 
             <img src="images/lil fish wedding.png"
                  alt="Wedding Venue">
 
             <div class="card-content">
 
-                <h3>Wedding Package</h3>
+                <h3>
+
+                    Wedding Package
+
+                </h3>
 
                 <p>
+
                     Starting at $2,500
+
                 </p>
 
                 <p>
+
                     8-hour rental included
+
                 </p>
 
                 <p>
-                    Tables, chairs, and lighting included
+
+                    Tables, chairs,
+                    and lighting included
+
                 </p>
 
                 <a href="contact.html"
@@ -546,59 +658,37 @@
 
         </article>
 
-        <!-- GRADUATION -->
-        <article class="card">
+        <!-- CONCERT -->
+        <article class="card"
+                 data-category="concert">
 
-            <img src="images/graduation.png"
-                 alt="Graduation Party">
-
-            <div class="card-content">
-
-                <h3>Graduation Celebrations</h3>
-
-                <p>
-                    Starting at $850
-                </p>
-
-                <p>
-                    4-hour rental included
-                </p>
-
-                <p>
-                    Decor add-ons available
-                </p>
-
-                <a href="contact.html"
-                   class="btn">
-
-                   Reserve Date
-
-                </a>
-
-            </div>
-
-        </article>
-
-        <!-- RETIREMENT -->
-        <article class="card">
-
-            <img src="images/retirement.png"
-                 alt="Retirement Party">
+            <img src="images/band1.png"
+                 alt="Concert Venue">
 
             <div class="card-content">
 
-                <h3>Retirement Parties</h3>
+                <h3>
+
+                    Concert Package
+
+                </h3>
 
                 <p>
-                    Starting at $700
+
+                    Indoor & outdoor concert support
+
                 </p>
 
                 <p>
-                    Indoor and outdoor seating available
+
+                    Vendor accommodations available
+
                 </p>
 
                 <p>
-                    Sound system included
+
+                    Flexible staging & seating
+
                 </p>
 
                 <a href="contact.html"
@@ -612,32 +702,201 @@
 
         </article>
 
-        <!-- ANNIVERSARY -->
-        <article class="card">
+        <!-- REUNION -->
+        <article class="card"
+                 data-category="community">
 
-            <img src="images/anniversary.png"
-                 alt="Anniversary Party">
+            <img src="images/reunion.png"
+                 alt="Family Reunion">
 
             <div class="card-content">
 
-                <h3>Anniversary Celebrations</h3>
+                <h3>
+
+                    Family Reunion Package
+
+                </h3>
 
                 <p>
-                    Starting at $950
+
+                    Indoor & outdoor gathering spaces
+
                 </p>
 
                 <p>
-                    5-hour rental package
+
+                    Flexible layouts available
+
                 </p>
 
                 <p>
-                    Elegant lighting package available
+
+                    Catering support available
+
                 </p>
 
                 <a href="contact.html"
                    class="btn">
 
-                   Book Event
+                   Book Today
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- CORPORATE -->
+        <article class="card"
+                 data-category="corporate">
+
+            <img src="images/corporate.png"
+                 alt="Corporate Event">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Corporate Event Package
+
+                </h3>
+
+                <p>
+
+                    Retreats,
+                    workshops,
+                    and meetings
+
+                </p>
+
+                <p>
+
+                    Presentation & banquet space
+
+                </p>
+
+                <p>
+
+                    Flexible room layouts available
+
+                </p>
+
+                <a href="contact.html"
+                   class="btn">
+
+                   Request Info
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+<!-- EVENT ARCHIVE -->
+<section class="seasonal-events">
+
+    <h2 class="section-title">
+
+        Event Archive
+
+    </h2>
+
+    <div class="card-container">
+
+        <!-- ARCHIVE 1 -->
+        <article class="card">
+
+            <img src="images/community.png"
+                 alt="Community Gala">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Community Gala 2025
+
+                </h3>
+
+                <p>
+
+                    An evening of live music,
+                    dining,
+                    and community celebration.
+
+                </p>
+
+                <a href="#"
+                   class="btn">
+
+                   Archive Coming Soon
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- ARCHIVE 2 -->
+        <article class="card">
+
+            <img src="images/band1.png"
+                 alt="Summer Concert">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Summer Concert Series
+
+                </h3>
+
+                <p>
+
+                    Outdoor concerts,
+                    local vendors,
+                    and live entertainment.
+
+                </p>
+
+                <a href="#"
+                   class="btn">
+
+                   Replay Coming Soon
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- ARCHIVE 3 -->
+        <article class="card">
+
+            <img src="images/reunion.png"
+                 alt="Family Reunion">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Family Reunion Weekend
+
+                </h3>
+
+                <p>
+
+                    Multi-day family gatherings
+                    and community traditions.
+
+                </p>
+
+                <a href="#"
+                   class="btn">
+
+                   Gallery Coming Soon
 
                 </a>
 
@@ -649,8 +908,124 @@
 
 </section>
 
-<!-- CUSTOM EVENT PACKAGES -->
-<section class="custom-events">
+<!-- STREAMING HUB -->
+<section id="streaming-hub"
+         class="featured-events reveal">
+
+    <h2 class="section-title">
+
+        Community Streaming Hub
+
+    </h2>
+
+    <div class="card-container">
+
+        <!-- STREAM 1 -->
+<article class="card">
+
+    <img src="images/livephoto.png"
+         alt="Live Broadcasts">
+
+    <div class="card-content">
+
+        <h3>
+
+            Live Event Broadcasts
+
+        </h3>
+
+        <p>
+
+            Future livestream coverage
+            for concerts,
+            festivals,
+            and special events.
+
+        </p>
+
+        <a href="#"
+           class="btn">
+
+           Streaming Coming Soon
+
+        </a>
+
+    </div>
+
+</article>
+
+        <!-- STREAM 2 -->
+        <article class="card">
+
+            <img src="images/community.png"
+                 alt="Community Replays">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Community Event Replays
+
+                </h3>
+
+                <p>
+
+                    Watch archived community
+                    celebrations and featured events.
+
+                </p>
+
+                <a href="#"
+                   class="btn">
+
+                   Replay Hub Coming Soon
+
+                </a>
+
+            </div>
+
+        </article>
+
+        <!-- STREAM 3 -->
+        <article class="card">
+
+            <img src="images/lil fish wedding.png"
+                 alt="Special Event Streaming">
+
+            <div class="card-content">
+
+                <h3>
+
+                    Private Event Streaming
+
+                </h3>
+
+                <p>
+
+                    Future private streaming
+                    options for weddings,
+                    reunions,
+                    and celebrations.
+
+                </p>
+
+                <a href="#"
+                   class="btn">
+
+                   Future Feature
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CUSTOM EVENTS -->
+<section class="custom-events reveal">
 
     <h2>
 
@@ -660,15 +1035,15 @@
 
     <p>
 
-        Hosting a family reunion,
+        Hosting a fundraiser,
+        reunion,
         birthday celebration,
-        corporate gathering,
-        community fundraiser,
-        or another special event?
+        retreat,
+        or special gathering?
 
         Lil Fish Community Center offers
-        customizable venue packages tailored
-        to your event needs.
+        customizable venue packages
+        tailored to your event needs.
 
     </p>
 
@@ -682,27 +1057,20 @@
 </section>
 
 <!-- FOOTER -->
-<!-- FOOTER -->
 <footer>
 
     <div class="social-icons">
 
         <a href="#">
-
             <i class="fa-brands fa-facebook-f"></i>
-
         </a>
 
         <a href="#">
-
             <i class="fa-brands fa-x-twitter"></i>
-
         </a>
 
         <a href="#">
-
             <i class="fa-brands fa-linkedin-in"></i>
-
         </a>
 
     </div>
@@ -714,5 +1082,8 @@
     </p>
 
 </footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>

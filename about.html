@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- FONT AWESOME -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <head>
 
     <meta charset="UTF-8">
@@ -23,11 +21,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
 
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet"
           href="style.css">
 
 </head>
+
+<body>
+
 <!-- BACK TO TOP BUTTON -->
 <button onclick="topFunction()"
         id="topBtn"
@@ -37,75 +42,61 @@
 
 </button>
 
-<script>
-
-    // SHOW BUTTON WHEN SCROLLING
-    window.onscroll = function() {
-
-        scrollFunction();
-
-    };
-
-    function scrollFunction() {
-
-        if (
-            document.body.scrollTop > 300 ||
-            document.documentElement.scrollTop > 300
-        ) {
-
-            document.getElementById("topBtn").style.display = "block";
-
-        } else {
-
-            document.getElementById("topBtn").style.display = "none";
-        }
-    }
-
-    // SCROLL TO TOP
-    function topFunction() {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-        });
-    }
-
-</script>
-<body>
-
 <!-- HEADER -->
 <header>
 
-    <h1>Lil Fish Community Center</h1>
+    <h1>
+
+        Lil Fish Community Center
+
+    </h1>
+
+    <!-- HAMBURGER ICON -->
+<div class="hamburger"
+     id="hamburger">
+
+    ☰
+
+</div>
+
+<!-- DARK MODE BUTTON -->
+<button id="themeToggle"
+        class="theme-toggle">
+
+    🌙
+
+</button>
+
 <nav>
 
-    <ul>
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+    <nav>
 
-        <li>
-            <a href="about.html">About</a>
-        </li>
+        <ul id="navLinks">
 
-        <li>
-            <a href="events.html">Events</a>
-        </li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-        <li>
-            <a href="gallery.html">Gallery</a>
-        </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
 
-    </ul>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
 
-</nav>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
 
 </header>
 
@@ -185,7 +176,6 @@
 </section>
 
 <!-- FOOTER -->
-<!-- FOOTER -->
 <footer>
 
     <div class="social-icons">
@@ -217,6 +207,8 @@
     </p>
 
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
