@@ -1,0 +1,128 @@
+/* =========================
+Event Card
+Matches Rental Card Design
+========================= */
+
+.event-card {
+  width: 90%;
+  height: 100%;
+  min-width: 0;
+
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+Event Image
+========================= */
+
+.event-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* =========================
+Event Content
+========================= */
+
+.event-card-content {
+  flex: 1;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card h3 {
+  color: #001633;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 20px 20px 14px;
+}
+
+.event-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 20px 8px;
+}
+
+.event-card p strong {
+  color: #001633;
+  font-weight: 800;
+}
+
+.event-notes {
+  flex-grow: 1;
+  padding-top: 8px;
+}
+
+/* =========================
+Event Button
+Matches Rental Button
+========================= */
+
+.event-card-btn {
+  background-color: #d4af37;
+  color: #001633;
+  border: none;
+
+  padding: 14px 24px;
+  margin: 20px;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.event-card-btn:hover {
+  background-color: #d4af37;
+  color: #001633;
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================
+Responsive Layout
+========================= */
+
+@media (max-width: 1200px) {
+  .event-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-image {
+    height: 260px;
+  }
+}

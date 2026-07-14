@@ -1,0 +1,139 @@
+.home-flip-section {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.home-flip-section h2 {
+  color: var(--heading-color);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-flip-intro {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.home-flip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.home-flip-card {
+  height: 430px;
+  perspective: 1000px;
+}
+
+.home-flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.home-flip-card:hover .home-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.home-flip-front,
+.home-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+}
+
+.home-flip-front {
+  background-color: var(--card-bg);
+}
+
+.home-flip-front img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.home-flip-front h3 {
+  color: var(--heading-color);
+  font-size: 1.5rem;
+  padding: 24px 15px;
+}
+
+.home-flip-back {
+  background-color: #001633;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px;
+}
+
+.home-flip-back h3 {
+  color: var(--heading-color);
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+.price-line {
+  font-weight: 900;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.home-flip-back p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.flip-card-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: #001633;
+  padding: 13px 22px;
+  border-radius: 10px;
+  font-weight: 900;
+  border: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.flip-card-btn:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1000px) {
+  .home-flip-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-flip-section h2 {
+    font-size: 2.3rem;
+  }
+
+  .home-flip-card {
+    height: 430px;
+  }
+
+  .home-flip-front img {
+    height: 250px;
+  }
+}

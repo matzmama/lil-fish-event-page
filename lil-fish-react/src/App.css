@@ -1,0 +1,243 @@
+/* =========================
+Global Theme Colors
+========================= */
+
+:root {
+  --page-bg: #001633;
+  --card-bg: #ffffff;
+  --text-color: #ffffff;
+  --heading-color: #d4af37;
+  --accent-color: #d4af37;
+  --section-bg: #001633;
+  --dark-text: #1f2937;
+}
+
+/* Classic Lil Fish */
+
+.classic-theme {
+  --page-bg: #001633;
+  --card-bg: #ffffff;
+  --text-color: #ffffff;
+  --heading-color: #d4af37;
+  --accent-color: #d4af37;
+  --section-bg: #001633;
+  --dark-text: #1f2937;
+}
+
+/* Spring */
+
+.spring-theme {
+  --page-bg: #f7fff5;
+  --card-bg: #ffffff;
+  --text-color: #263238;
+  --heading-color: #2f6f4e;
+  --accent-color: #e88aa3;
+  --section-bg: #eef9ed;
+  --dark-text: #263238;
+}
+
+/* Summer */
+
+.summer-theme {
+  --page-bg: #fff8e1;
+  --card-bg: #ffffff;
+  --text-color: #1f2937;
+  --heading-color: #006d77;
+  --accent-color: #f9a620;
+  --section-bg: #fff0c2;
+  --dark-text: #1f2937;
+}
+
+/* Fall */
+
+.fall-theme {
+  --page-bg: #2f1b0c;
+  --card-bg: #fff7ed;
+  --text-color: #fff7ed;
+  --heading-color: #f59e0b;
+  --accent-color: #d97706;
+  --section-bg: #3b2412;
+  --dark-text: #2f1b0c;
+}
+
+/* Winter */
+
+.winter-theme {
+  --page-bg: #eaf4fb;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --heading-color: #1d4ed8;
+  --accent-color: #64748b;
+  --section-bg: #dbeafe;
+  --dark-text: #1e293b;
+}
+
+/* =========================
+App Layout
+========================= */
+
+.app {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+/* =========================
+Events Page
+========================= */
+
+.events-page {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+/* =========================
+Upcoming Events Banner
+========================= */
+
+.events-banner {
+  background-color: var(--page-bg);
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.events-banner h2 {
+  color: var(--heading-color);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.events-banner p {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  line-height: 1.8;
+
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =========================
+Event Grid
+========================= */
+
+.event-grid {
+  width: 100%;
+  max-width: 1600px;
+  margin: 60px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.event-grid > div {
+  min-width: 0;
+  height: 100%;
+}
+
+/* =========================
+Venue Rentals
+========================= */
+
+.rentals-section {
+  background-color: var(--section-bg);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.rentals-section h2 {
+  color: var(--heading-color);
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+}
+
+.rental-grid {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* =========================
+Seasonal Event Highlight
+========================= */
+
+.seasonal-event-highlight {
+  position: relative;
+
+  border: 4px solid var(--accent-color);
+  border-radius: 26px;
+  padding: 8px;
+
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+
+  animation: seasonalGlow 1.8s ease-in-out infinite alternate;
+}
+
+.seasonal-event-highlight::before {
+  content: "Seasonal Pick";
+
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  z-index: 5;
+
+  background-color: var(--accent-color);
+  color: #001633;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@keyframes seasonalGlow {
+  from {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  }
+
+  to {
+    box-shadow: 0 0 32px rgba(212, 175, 55, 0.65);
+  }
+}
+
+/* =========================
+Responsive Layout
+========================= */
+
+@media (max-width: 1200px) {
+  .event-grid,
+  .rental-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .events-banner h2,
+  .rentals-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .event-grid,
+  .rental-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-banner {
+    padding: 60px 20px 30px;
+  }
+
+  .events-banner p {
+    font-size: 1.1rem;
+  }
+}

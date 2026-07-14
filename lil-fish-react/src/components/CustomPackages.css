@@ -1,0 +1,206 @@
+/* =========================
+Custom Packages Section
+========================= */
+
+.custom-packages {
+  background-color: var(--page-bg);
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.custom-packages > h2 {
+  color: var(--heading-color);
+  font-size: 4rem;
+  margin-bottom: 60px;
+}
+
+/* =========================
+Package Grid
+========================= */
+
+.package-grid {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* =========================
+Package Card
+Matches Rental Card Design
+========================= */
+
+.package-card {
+  width: 100%;
+  height: 100%;
+
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.package-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-card h3 {
+  color: #001633;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 20px 20px 10px;
+}
+
+.package-details {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.package-details p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+/* =========================
+Package Button
+Matches Rental Button
+========================= */
+
+.package-card-btn {
+  background-color: #d4af37;
+  color: #001633;
+  border: none;
+
+  padding: 14px 24px;
+  margin: 20px;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.package-card-btn:hover {
+  background-color: #d4af37;
+  color: #001633;
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================
+Custom Quote
+========================= */
+
+.custom-quote {
+  max-width: 900px;
+  margin: 100px auto 0;
+}
+
+.custom-quote h2 {
+  color: var(--heading-color);
+  font-size: 4rem;
+  margin-bottom: 30px;
+}
+
+.custom-quote p {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.custom-quote-btn {
+  background-color: #d4af37;
+  color: #001633;
+  border: none;
+
+  padding: 14px 30px;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.custom-quote-btn:hover {
+  background-color: #d4af37;
+  color: #001633;
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================
+Responsive Layout
+========================= */
+
+@media (max-width: 1200px) {
+  .package-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-packages {
+    padding: 70px 20px;
+  }
+
+  .custom-packages > h2,
+  .custom-quote h2 {
+    font-size: 2.7rem;
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .package-image {
+    height: 240px;
+  }
+}

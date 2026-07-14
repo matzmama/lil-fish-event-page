@@ -1,0 +1,188 @@
+/* =========================
+Booking Inquiry Section
+========================= */
+
+.contact-booking-section {
+  background-color: #faf7f1;
+  padding: 70px 20px 100px;
+  text-align: center;
+}
+
+.contact-booking-section h2 {
+  color: #001633;
+  font-size: 3rem;
+  margin: 0 0 16px;
+}
+
+.contact-booking-intro {
+  max-width: 680px;
+  margin: 0 auto 35px;
+
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+Form Container
+========================= */
+
+.contact-booking-form {
+  box-sizing: border-box;
+
+  width: min(90%, 720px);
+  margin: 0 auto;
+  padding: 36px;
+
+  background-color: #061b2f;
+  border: 2px solid #d4af37;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================
+Labels
+========================= */
+
+.contact-booking-form label {
+  display: block;
+
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+/* =========================
+Inputs, Select, and Textarea
+========================= */
+
+.contact-booking-form input,
+.contact-booking-form select,
+.contact-booking-form textarea {
+  box-sizing: border-box;
+
+  width: 100%;
+  display: block;
+
+  margin: 0 0 20px;
+  padding: 16px 18px;
+
+  background-color: #fffaf0;
+  color: #061b2f;
+
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 1rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-booking-form input:focus,
+.contact-booking-form select:focus,
+.contact-booking-form textarea:focus {
+  border-color: #f0cc55;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+}
+
+.contact-booking-form select {
+  cursor: pointer;
+}
+
+.contact-booking-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* =========================
+Submit Button
+========================= */
+
+.contact-booking-form button {
+  width: auto;
+  min-width: 210px;
+
+  align-self: center;
+
+  margin: 8px auto 0;
+  padding: 14px 34px;
+
+  background-color: #d4af37;
+  color: #061b2f;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.contact-booking-form button:hover {
+  background-color: #d4af37;
+  color: #061b2f;
+
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================
+Success Message
+========================= */
+
+.contact-success-message {
+  width: min(90%, 720px);
+  box-sizing: border-box;
+
+  margin: 0 auto 22px;
+  padding: 15px 20px;
+
+  background-color: #eaf7ec;
+  color: #245c30;
+
+  border: 2px solid #58a96b;
+  border-radius: 10px;
+
+  font-weight: 800;
+}
+
+/* =========================
+Mobile Layout
+========================= */
+
+@media (max-width: 600px) {
+  .contact-booking-section {
+    padding: 55px 16px 75px;
+  }
+
+  .contact-booking-section h2 {
+    font-size: 2.3rem;
+  }
+
+  .contact-booking-form {
+    width: 100%;
+    padding: 26px 20px;
+  }
+
+  .contact-booking-form button {
+    width: 100%;
+  }
+}

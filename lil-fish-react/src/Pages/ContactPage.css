@@ -1,0 +1,206 @@
+.contact-hero {
+
+
+    background-color: #f5f3ef;
+
+
+    text-align: center;
+
+
+    padding: 80px 20px;
+
+
+}
+
+
+.contact-logo {
+
+
+    width: 350px;
+
+
+    max-width: 90%;
+
+
+    border-radius: 20px;
+
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+
+    margin-bottom: 40px;
+
+
+}
+
+
+.contact-hero h1 {
+
+
+    color: #001633;
+
+
+    font-size: 5rem;
+
+
+    margin-bottom: 30px;
+
+
+}
+
+
+.contact-hero p {
+
+
+    color: #334155;
+
+
+    font-size: 1.5rem;
+
+
+    max-width: 1000px;
+
+
+    margin: 0 auto;
+
+
+    line-height: 1.8;
+
+
+}
+
+
+.contact-info {
+
+
+    background-color: #020814;
+
+
+    text-align: center;
+
+
+    padding: 100px 20px;
+
+
+}
+
+
+.contact-info h2 {
+
+
+    color: white;
+
+
+    font-size: 3.5rem;
+
+
+    margin-bottom: 60px;
+
+
+}
+
+
+.contact-details {
+
+
+    display: flex;
+
+
+    justify-content: center;
+
+
+    gap: 100px;
+
+
+    flex-wrap: wrap;
+
+
+}
+
+
+.contact-details h3 {
+
+
+    color: white;
+
+
+    margin-bottom: 15px;
+
+
+}
+
+
+.contact-details p {
+
+
+    color: white;
+
+
+    font-size: 1.2rem;
+
+
+    line-height: 1.8;
+
+
+}
+
+
+
+.contact-page {
+  background-color: #faf7f1;
+}
+
+.contact-hero {
+  background-color: #faf7f1;
+  padding: 100px 20px 35px;
+  text-align: center;
+}
+
+.logo-card {
+  width: 430px;
+  max-width: 90%;
+  background-color: #061b2f;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.25);
+  margin: 0 auto 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-card img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.contact-hero h1 {
+  font-size: 4.5rem;
+  color: #061b2f;
+  margin-bottom: 35px;
+  font-weight: 800;
+}
+
+.contact-hero p {
+  max-width: 950px;
+  margin: 0 auto;
+  color: #061b2f;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.contact-info h2 {
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.contact-info strong {
+    color: #d4af37;
+}
+
+.contact-info p {
+    color: #ffffff;
+    line-height: 1.8;
+}
