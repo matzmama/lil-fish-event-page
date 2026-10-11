@@ -1,130 +1,121 @@
-/* =========================
-Rental Card
-========================= */
+.rental-card { 
 
-.rental-card {
-  width: 100%;
-  height: 100%;
+  background: white; 
 
-  background-color: white;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
+  border-radius: 20px; 
 
-  display: flex;
-  flex-direction: column;
+  overflow: hidden; 
 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center; 
 
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
 
-.rental-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
-}
+  transition: transform 0.3s ease; 
 
-/* =========================
-Rental Image
-========================= */
+  display: flex; 
 
-.rental-image {
-  width: 100%;
-  height: 220px;
+  flex-direction: column; 
 
-  object-fit: cover;
-  display: block;
-}
+} 
 
-/* =========================
-Rental Heading
-========================= */
+  
 
-.rental-card h3 {
-  color: #001633;
+.rental-card:hover { 
 
-  font-size: 2rem;
-  line-height: 1.1;
+  transform: translateY(-5px); 
 
-  margin: 20px 20px 10px;
-}
+} 
 
-/* =========================
-Rental Description
-========================= */
+  
 
-.rental-card p {
-  color: #555;
+.rental-image { 
 
-  padding: 0 20px;
-  margin: 0 0 20px;
+  width: 100%; 
 
-  font-size: 1rem;
-  line-height: 1.6;
+  height: 220px; 
 
-  flex-grow: 1;
-}
+  object-fit: cover; 
 
-/* =========================
-Rental Link Button
-========================= */
+} 
 
-.rental-card-btn {
-  background-color: #d4af37;
-  color: #001633;
+  
 
-  border: none;
-  border-radius: 10px;
+.rental-card h3 { 
 
-  margin: 0 20px 20px;
-  padding: 14px 24px;
+  color: #001633; 
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2rem; 
 
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
+  margin: 20px 0 10px; 
 
-  cursor: pointer;
+} 
 
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
+  
 
-.rental-card-btn:visited {
-  color: #001633;
-}
+.rental-card p { 
 
-.rental-card-btn:hover {
-  background-color: #d4af37;
-  color: #001633;
+  color: #555; 
 
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
+  padding: 0 20px; 
 
-/* =========================
-Responsive Layout
-========================= */
+  line-height: 1.6; 
 
-@media (max-width: 1200px) {
-  .rental-image {
-    height: 240px;
-  }
-}
+  flex-grow: 1; 
 
-@media (max-width: 768px) {
-  .rental-image {
-    height: 260px;
-  }
+} 
 
-  .rental-card-btn {
-    margin: 0 18px 18px;
-  }
-}
+  
+
+.rental-card-btn { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  border: none; 
+
+  padding: 12px 22px; 
+
+  margin: 20px; 
+
+  border-radius: 8px; 
+
+  font-weight: 600; 
+
+  text-decoration: none; 
+
+  white-space: nowrap; 
+
+  display: inline-flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+  cursor: pointer; 
+
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+
+} 
+
+  
+
+.rental-card-btn:visited { 
+
+  color: #001633; 
+
+} 
+
+  
+
+.rental-card-btn:hover { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  opacity: 0.9; 
+
+  transform: translateY(-1px); 
+
+} 

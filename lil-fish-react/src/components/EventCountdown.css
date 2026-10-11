@@ -48,14 +48,14 @@
   background-color: var(--page-bg);
   color: var(--accent-color);
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 12px 22px;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 700;
   white-space: nowrap;
   transition: all 0.3s ease;
 }
 .countdown-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-1px);
   background-color: white;
 }
 @media (max-width: 950px) {

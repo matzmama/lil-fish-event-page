@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
 import "./FeaturedCarousel.css";
 
 import harvestFestival from "../assets/lil fish harvest festival.png";
@@ -10,18 +11,11 @@ function FeaturedCarousel() {
 
   const featuredEvents = [
     {
-      title: "Spring Festival",
-      date: "April 12, 2026",
+      title: "Harvest Festival",
+      date: "Saturdays through October 2026",
       image: harvestFestival,
       description:
-        "Family activities, vendors, food trucks, and live music throughout the community center grounds.",
-    },
-    {
-      title: "Summer Concert",
-      date: "July 25, 2026",
-      image: bandPhoto,
-      description:
-        "An evening of live music featuring the Summer Jam Band at the outdoor amphitheater.",
+        "Fall vendors, seasonal food, pumpkin activities, music, and family fun throughout the community center grounds.",
     },
     {
       title: "Holiday Market",
@@ -29,6 +23,13 @@ function FeaturedCarousel() {
       image: holidayMarket,
       description:
         "Local crafts, holiday gifts, seasonal treats, and community vendors inside the main hall.",
+    },
+    {
+      title: "Summer Concert",
+      date: "July 25, 2027",
+      image: bandPhoto,
+      description:
+        "An evening of live music featuring the Summer Jam Band at the outdoor amphitheater.",
     },
   ];
 
@@ -62,17 +63,23 @@ function FeaturedCarousel() {
     <section className="featured-carousel-section">
       <div className="carousel-heading">
         <p>Featured Events</p>
-        <h2>Discover What’s Happening Next</h2>
+        <h2>Discover What's Happening Next</h2>
       </div>
 
       <div className="featured-carousel">
-        <button className="carousel-arrow" onClick={goToPrevious}>
-          ←
+        <button
+          className="carousel-arrow"
+          onClick={goToPrevious}
+          aria-label="Show previous featured event"
+        >
+          <FaArrowLeft aria-hidden="true" />
         </button>
 
         <div className="carousel-card" key={currentEvent.title}>
           <div className="carousel-image-wrapper">
-            <span className="featured-badge">★★★★★ Featured Event</span>
+            <span className="featured-badge">
+              <FaStar aria-hidden="true" /> Featured Event
+            </span>
 
             <img src={currentEvent.image} alt={currentEvent.title} />
           </div>
@@ -94,8 +101,12 @@ function FeaturedCarousel() {
           </div>
         </div>
 
-        <button className="carousel-arrow" onClick={goToNext}>
-          →
+        <button
+          className="carousel-arrow"
+          onClick={goToNext}
+          aria-label="Show next featured event"
+        >
+          <FaArrowRight aria-hidden="true" />
         </button>
       </div>
 

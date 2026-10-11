@@ -1,206 +1,343 @@
-/* =========================
-Custom Packages Section
-========================= */
+/* ========================= 
 
-.custom-packages {
-  background-color: var(--page-bg);
-  padding: 100px 40px;
-  text-align: center;
-}
+   Custom Packages Section 
 
-.custom-packages > h2 {
-  color: var(--heading-color);
-  font-size: 4rem;
-  margin-bottom: 60px;
-}
+   ========================= */ 
 
-/* =========================
-Package Grid
-========================= */
+  
 
-.package-grid {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+.custom-packages { 
 
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 30px;
-}
+  background-color: var(--page-bg); 
 
-/* =========================
-Package Card
-Matches Rental Card Design
-========================= */
+  padding: 100px 40px; 
 
-.package-card {
-  width: 100%;
-  height: 100%;
+  text-align: center; 
 
-  background-color: white;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
+} 
 
-  display: flex;
-  flex-direction: column;
+  
 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.custom-packages > h2 { 
 
-  transition: transform 0.3s ease;
-}
+  color: var(--heading-color); 
 
-.package-card:hover {
-  transform: translateY(-5px);
-}
+  font-size: 4rem; 
 
-.package-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
+  margin-bottom: 60px; 
 
-.package-card-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+} 
 
-.package-card h3 {
-  color: #001633;
-  font-size: 2rem;
-  line-height: 1.1;
-  margin: 20px 20px 10px;
-}
+  
 
-.package-details {
-  flex-grow: 1;
-  padding: 0 20px;
-}
+.package-grid { 
 
-.package-details p {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 8px;
-}
+  width: 100%; 
 
-/* =========================
-Package Button
-Matches Rental Button
-========================= */
+  max-width: 1600px; 
 
-.package-card-btn {
-  background-color: #d4af37;
-  color: #001633;
-  border: none;
+  margin: 0 auto; 
 
-  padding: 14px 24px;
-  margin: 20px;
+  display: grid; 
 
-  border-radius: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); 
 
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
+  gap: 30px; 
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+} 
 
-  cursor: pointer;
+  
 
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
+.package-card { 
 
-.package-card-btn:hover {
-  background-color: #d4af37;
-  color: #001633;
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
+  width: 100%; 
 
-/* =========================
-Custom Quote
-========================= */
+  height: 100%; 
 
-.custom-quote {
-  max-width: 900px;
-  margin: 100px auto 0;
-}
+  background-color: white; 
 
-.custom-quote h2 {
-  color: var(--heading-color);
-  font-size: 4rem;
-  margin-bottom: 30px;
-}
+  border-radius: 20px; 
 
-.custom-quote p {
-  color: var(--text-color);
-  font-size: 1.3rem;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
+  overflow: hidden; 
 
-.custom-quote-btn {
-  background-color: #d4af37;
-  color: #001633;
-  border: none;
+  text-align: center; 
 
-  padding: 14px 30px;
-  border-radius: 10px;
+  display: flex; 
 
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
+  flex-direction: column; 
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
 
-  cursor: pointer;
+  transition: transform 0.3s ease; 
 
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
+} 
 
-.custom-quote-btn:hover {
-  background-color: #d4af37;
-  color: #001633;
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
+  
 
-/* =========================
-Responsive Layout
-========================= */
+.package-card:hover { 
 
-@media (max-width: 1200px) {
-  .package-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+  transform: translateY(-5px); 
 
-@media (max-width: 768px) {
-  .custom-packages {
-    padding: 70px 20px;
-  }
+} 
 
-  .custom-packages > h2,
-  .custom-quote h2 {
-    font-size: 2.7rem;
-  }
+  
 
-  .package-grid {
-    grid-template-columns: 1fr;
-  }
+.package-image { 
 
-  .package-image {
-    height: 240px;
-  }
-}
+  width: 100%; 
+
+  height: 220px; 
+
+  object-fit: cover; 
+
+  display: block; 
+
+} 
+
+  
+
+.package-card-content { 
+
+  flex: 1; 
+
+  display: flex; 
+
+  flex-direction: column; 
+
+} 
+
+  
+
+.package-card h3 { 
+
+  color: #001633; 
+
+  font-size: 2rem; 
+
+  line-height: 1.1; 
+
+  margin: 20px 20px 10px; 
+
+} 
+
+  
+
+.package-details { 
+
+  flex-grow: 1; 
+
+  padding: 0 20px; 
+
+} 
+
+  
+
+.package-details p { 
+
+  color: #555; 
+
+  font-size: 1rem; 
+
+  line-height: 1.6; 
+
+  margin: 0 0 8px; 
+
+} 
+
+  
+
+.package-card-btn { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  border: none; 
+
+  padding: 12px 22px; 
+
+  margin: 20px; 
+
+  border-radius: 8px; 
+
+  font-size: 1rem; 
+
+  font-weight: 600; 
+
+  text-decoration: none; 
+
+  white-space: nowrap; 
+
+  display: inline-flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+  cursor: pointer; 
+
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+
+} 
+
+  
+
+.package-card-btn:visited { 
+
+  color: #001633; 
+
+} 
+
+  
+
+.package-card-btn:hover { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  opacity: 0.9; 
+
+  transform: translateY(-1px); 
+
+} 
+
+  
+
+.custom-quote { 
+
+  max-width: 900px; 
+
+  margin: 100px auto 0; 
+
+} 
+
+  
+
+.custom-quote h2 { 
+
+  color: var(--heading-color); 
+
+  font-size: 4rem; 
+
+  margin-bottom: 30px; 
+
+} 
+
+  
+
+.custom-quote p { 
+
+  color: var(--text-color); 
+
+  font-size: 1.3rem; 
+
+  line-height: 1.8; 
+
+  margin-bottom: 40px; 
+
+} 
+
+  
+
+.custom-quote-btn { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  border: none; 
+
+  padding: 12px 26px; 
+
+  border-radius: 8px; 
+
+  font-size: 1rem; 
+
+  font-weight: 600; 
+
+  text-decoration: none; 
+
+  display: inline-flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+  cursor: pointer; 
+
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+
+} 
+
+  
+
+.custom-quote-btn:visited { 
+
+  color: #001633; 
+
+} 
+
+  
+
+.custom-quote-btn:hover { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  opacity: 0.9; 
+
+  transform: translateY(-1px); 
+
+} 
+
+  
+
+@media (max-width: 1200px) { 
+
+  .package-grid { 
+
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+
+  } 
+
+} 
+
+  
+
+@media (max-width: 768px) { 
+
+  .custom-packages { 
+
+    padding: 70px 20px; 
+
+  } 
+
+  
+
+  .custom-packages > h2, 
+
+  .custom-quote h2 { 
+
+    font-size: 2.7rem; 
+
+  } 
+
+  
+
+  .package-grid { 
+
+    grid-template-columns: 1fr; 
+
+  } 
+
+  
+
+  .package-image { 
+
+    height: 240px; 
+
+  } 
+
+} 

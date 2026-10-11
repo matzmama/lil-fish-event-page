@@ -1,291 +1,613 @@
-/* =========================
-Interactive Hero
-========================= */
-
-.interactive-hero {
-  width: 100%;
-  min-height: 590px;
-
-  position: relative;
-  overflow: hidden;
-
-  background-image:
-    linear-gradient(
-      135deg,
-      rgba(0, 22, 51, 0.78),
-      rgba(0, 22, 51, 0.58)
-    ),
-    url("../assets/plain lil fish photo.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* =========================
-Hero Overlay
-========================= */
-
-.interactive-hero-overlay {
-  width: 100%;
-  min-height: 590px;
-  padding: 74px 28px 88px;
+/* ========================= 
 
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* =========================
-Hero Content
-========================= */
-
-.interactive-hero-content {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-
-  color: #ffffff;
-  text-align: center;
-
-  animation: interactiveHeroFade 0.8s ease forwards;
-}
-
-.interactive-hero-kicker {
-  margin: 0 0 18px;
-
-  color: #d4af37;
-
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 3px;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-/* Matches the simpler Events hero heading style */
-.interactive-hero-content h1 {
-  max-width: 900px;
-  margin: 0 auto 22px;
-
-  color: #f8f3e8;
-
-  font-family: inherit;
-  font-size: clamp(2.6rem, 4.1vw, 4rem);
-  font-weight: 500;
-  line-height: 1.12;
-  letter-spacing: -0.8px;
-
-  text-wrap: balance;
-
-  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-}
-
-.interactive-hero-content h1 span {
-  color: #f8f3e8;
-  font-family: inherit;
-  font-weight: 500;
-}
-
-.interactive-hero-text {
-  max-width: 680px;
-  margin: 0 auto 30px;
-
-  color: rgba(255, 255, 255, 0.92);
-
-  font-size: 1rem;
-  line-height: 1.65;
-
-  text-wrap: balance;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.34);
-}
-
-/* =========================
-Hero Buttons
-========================= */
-
-.interactive-hero-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  gap: 12px;
-}
-
-.interactive-hero-btn {
-  min-width: 165px;
-  min-height: 46px;
-  padding: 10px 22px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 999px;
-
-  font-size: 0.92rem;
-  font-weight: 700;
-  text-decoration: none;
-
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.interactive-hero-primary {
-  background-color: #d4af37;
-  color: #001633;
-  border: 2px solid #d4af37;
-}
-
-.interactive-hero-primary:hover {
-  background-color: #e3c24c;
-  color: #001633;
-  border-color: #e3c24c;
-  transform: translateY(-2px);
-}
-
-.interactive-hero-secondary {
-  background-color: rgba(0, 22, 51, 0.24);
-  color: #ffffff;
-  border: 2px solid rgba(255, 255, 255, 0.78);
-}
-
-.interactive-hero-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.94);
-  color: #001633;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* =========================
-Scroll Indicator
-========================= */
-
-.interactive-hero-scroll {
-  position: absolute;
-  bottom: 18px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  color: rgba(255, 255, 255, 0.75);
-  text-align: center;
-
-  font-size: 0.64rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.interactive-scroll-line {
-  width: 2px;
-  height: 26px;
-  margin: 6px auto 0;
-
-  background-color: #d4af37;
-
-  transform-origin: top;
-  animation: interactiveScrollPulse 1.4s infinite ease-in-out;
-}
-
-/* =========================
-Animations
-========================= */
-
-@keyframes interactiveHeroFade {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes interactiveScrollPulse {
-  0% {
-    transform: scaleY(0.35);
-    opacity: 0.35;
-  }
-
-  50% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scaleY(0.35);
-    opacity: 0.35;
-  }
-}
-
-/* =========================
-Tablet
-========================= */
-
-@media (max-width: 900px) {
-  .interactive-hero,
-  .interactive-hero-overlay {
-    min-height: 560px;
-  }
-
-  .interactive-hero-overlay {
-    padding: 68px 24px 84px;
-  }
-
-  .interactive-hero-content h1 {
-    font-size: clamp(2.3rem, 6vw, 3.2rem);
-  }
-
-  .interactive-hero-text {
-    font-size: 0.98rem;
-  }
-}
-
-/* =========================
-Mobile
-========================= */
-
-@media (max-width: 600px) {
-  .interactive-hero,
-  .interactive-hero-overlay {
-    min-height: 580px;
-  }
-
-  .interactive-hero-overlay {
-    padding: 60px 18px 84px;
-  }
-
-  .interactive-hero-kicker {
-    font-size: 0.72rem;
-    letter-spacing: 2px;
-  }
-
-  .interactive-hero-content h1 {
-    font-size: 2.1rem;
-    line-height: 1.15;
-  }
-
-  .interactive-hero-text {
-    font-size: 0.94rem;
-    line-height: 1.58;
-    margin-bottom: 26px;
-  }
-
-  .interactive-hero-actions {
-    flex-direction: column;
-  }
-
-  .interactive-hero-btn {
-    width: 100%;
-    max-width: 245px;
-  }
-}
+   Interactive Hero 
+
+   ========================= */ 
+
+  
+
+.interactive-hero { 
+
+  width: 100%; 
+
+  min-height: 590px; 
+
+  
+
+  position: relative; 
+
+  overflow: hidden; 
+
+  
+
+  background-image: 
+
+    linear-gradient( 
+
+      135deg, 
+
+      rgba(0, 22, 51, 0.78), 
+
+      rgba(0, 22, 51, 0.58) 
+
+    ), 
+
+    url("../assets/plain lil fish photo.png"); 
+
+  
+
+  background-size: cover; 
+
+  background-position: center; 
+
+  background-repeat: no-repeat; 
+
+} 
+
+  
+
+/* ========================= 
+
+   Hero Overlay 
+
+   ========================= */ 
+
+  
+
+.interactive-hero-overlay { 
+
+  width: 100%; 
+
+  min-height: 590px; 
+
+  
+
+  padding: 74px 28px 88px; 
+
+  
+
+  position: relative; 
+
+  
+
+  display: flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+} 
+
+  
+
+/* ========================= 
+
+   Hero Content 
+
+   ========================= */ 
+
+  
+
+.interactive-hero-content { 
+
+  width: 100%; 
+
+  max-width: 900px; 
+
+  
+
+  margin: 0 auto; 
+
+  
+
+  color: #ffffff; 
+
+  text-align: center; 
+
+  
+
+  animation: interactiveHeroFade 0.8s ease forwards; 
+
+} 
+
+  
+
+.interactive-hero-kicker { 
+
+  margin: 0 0 18px; 
+
+  
+
+  color: #d4af37; 
+
+  
+
+  font-size: 0.82rem; 
+
+  font-weight: 800; 
+
+  letter-spacing: 3px; 
+
+  line-height: 1.4; 
+
+  text-transform: uppercase; 
+
+} 
+
+  
+
+.interactive-hero-content h1 { 
+
+  max-width: 900px; 
+
+  
+
+  margin: 0 auto 22px; 
+
+  
+
+  color: #f8f3e8; 
+
+  
+
+  font-family: inherit; 
+
+  font-size: clamp(2.6rem, 4.1vw, 4rem); 
+
+  font-weight: 500; 
+
+  line-height: 1.12; 
+
+  letter-spacing: 0; 
+
+  
+
+  text-wrap: balance; 
+
+  
+
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35); 
+
+} 
+
+  
+
+.interactive-hero-content h1 span { 
+
+  color: #f8f3e8; 
+
+  
+
+  font-family: inherit; 
+
+  font-weight: 500; 
+
+} 
+
+  
+
+.interactive-hero-text { 
+
+  max-width: 680px; 
+
+  
+
+  margin: 0 auto 30px; 
+
+  
+
+  color: rgba(255, 255, 255, 0.92); 
+
+  
+
+  font-size: 1rem; 
+
+  line-height: 1.65; 
+
+  
+
+  text-wrap: balance; 
+
+  
+
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.34); 
+
+} 
+
+  
+
+/* ========================= 
+
+   Hero Buttons 
+
+   ========================= */ 
+
+  
+
+.interactive-hero-actions { 
+
+  display: flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+  flex-wrap: wrap; 
+
+  
+
+  gap: 12px; 
+
+} 
+
+  
+
+.interactive-hero-btn { 
+
+  min-width: 165px; 
+
+  min-height: 44px; 
+
+  
+
+  padding: 9px 21px; 
+
+  
+
+  display: inline-flex; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+  
+
+  border-radius: 999px; 
+
+  
+
+  font-size: 0.92rem; 
+
+  font-weight: 650; 
+
+  text-decoration: none; 
+
+  
+
+  transition: 
+
+    transform 0.3s ease, 
+
+    background-color 0.3s ease, 
+
+    color 0.3s ease, 
+
+    border-color 0.3s ease; 
+
+} 
+
+  
+
+.interactive-hero-primary { 
+
+  background-color: #d4af37; 
+
+  color: #001633; 
+
+  
+
+  border: 1px solid #d4af37; 
+
+} 
+
+  
+
+.interactive-hero-primary:hover { 
+
+  background-color: #e3c24c; 
+
+  color: #001633; 
+
+  
+
+  border-color: #e3c24c; 
+
+  
+
+  transform: translateY(-1px); 
+
+} 
+
+  
+
+.interactive-hero-secondary { 
+
+  background-color: rgba(0, 22, 51, 0.24); 
+
+  color: #ffffff; 
+
+  
+
+  border: 1px solid rgba(255, 255, 255, 0.78); 
+
+} 
+
+  
+
+.interactive-hero-secondary:hover { 
+
+  background-color: rgba(255, 255, 255, 0.94); 
+
+  color: #001633; 
+
+  
+
+  border-color: #ffffff; 
+
+  
+
+  transform: translateY(-1px); 
+
+} 
+
+  
+
+/* ========================= 
+
+   Scroll Indicator 
+
+   ========================= */ 
+
+  
+
+.interactive-hero-scroll { 
+
+  position: absolute; 
+
+  bottom: 18px; 
+
+  left: 50%; 
+
+  
+
+  transform: translateX(-50%); 
+
+  
+
+  color: rgba(255, 255, 255, 0.75); 
+
+  
+
+  text-align: center; 
+
+  
+
+  font-size: 0.64rem; 
+
+  font-weight: 800; 
+
+  letter-spacing: 2px; 
+
+  text-transform: uppercase; 
+
+} 
+
+  
+
+.interactive-scroll-line { 
+
+  width: 2px; 
+
+  height: 26px; 
+
+  
+
+  margin: 6px auto 0; 
+
+  
+
+  background-color: #d4af37; 
+
+  
+
+  transform-origin: top; 
+
+  
+
+  animation: interactiveScrollPulse 1.4s infinite ease-in-out; 
+
+} 
+
+  
+
+/* ========================= 
+
+   Animations 
+
+   ========================= */ 
+
+  
+
+@keyframes interactiveHeroFade { 
+
+  from { 
+
+    opacity: 0; 
+
+    transform: translateY(16px); 
+
+  } 
+
+  
+
+  to { 
+
+    opacity: 1; 
+
+    transform: translateY(0); 
+
+  } 
+
+} 
+
+  
+
+@keyframes interactiveScrollPulse { 
+
+  0% { 
+
+    transform: scaleY(0.35); 
+
+    opacity: 0.35; 
+
+  } 
+
+  
+
+  50% { 
+
+    transform: scaleY(1); 
+
+    opacity: 1; 
+
+  } 
+
+  
+
+  100% { 
+
+    transform: scaleY(0.35); 
+
+    opacity: 0.35; 
+
+  } 
+
+} 
+
+  
+
+/* ========================= 
+
+   Tablet 
+
+   ========================= */ 
+
+  
+
+@media (max-width: 900px) { 
+
+  .interactive-hero, 
+
+  .interactive-hero-overlay { 
+
+    min-height: 560px; 
+
+  } 
+
+  
+
+  .interactive-hero-overlay { 
+
+    padding: 68px 24px 84px; 
+
+  } 
+
+  
+
+  .interactive-hero-content h1 { 
+
+    font-size: clamp(2.3rem, 6vw, 3.2rem); 
+
+  } 
+
+  
+
+  .interactive-hero-text { 
+
+    font-size: 0.98rem; 
+
+  } 
+
+} 
+
+  
+
+/* ========================= 
+
+   Mobile 
+
+   ========================= */ 
+
+  
+
+@media (max-width: 600px) { 
+
+  .interactive-hero, 
+
+  .interactive-hero-overlay { 
+
+    min-height: 580px; 
+
+  } 
+
+  
+
+  .interactive-hero-overlay { 
+
+    padding: 60px 18px 84px; 
+
+  } 
+
+  
+
+  .interactive-hero-kicker { 
+
+    font-size: 0.72rem; 
+
+    letter-spacing: 2px; 
+
+  } 
+
+  
+
+  .interactive-hero-content h1 { 
+
+    font-size: 2.1rem; 
+
+    line-height: 1.15; 
+
+  } 
+
+  
+
+  .interactive-hero-text { 
+
+    font-size: 0.94rem; 
+
+    line-height: 1.58; 
+
+  
+
+    margin-bottom: 26px; 
+
+  } 
+
+  
+
+  .interactive-hero-actions { 
+
+    flex-direction: column; 
+
+  } 
+
+  
+
+  .interactive-hero-btn { 
+
+    width: 100%; 
+
+    max-width: 245px; 
+
+  } 
+
+} 

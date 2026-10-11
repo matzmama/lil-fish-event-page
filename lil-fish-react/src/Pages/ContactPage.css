@@ -1,206 +1,91 @@
-.contact-hero {
-
-
-    background-color: #f5f3ef;
-
-
-    text-align: center;
-
-
-    padding: 80px 20px;
-
-
-}
-
-
-.contact-logo {
-
-
-    width: 350px;
-
-
-    max-width: 90%;
-
-
-    border-radius: 20px;
-
-
-    box-shadow: 0 10px 25px rgba(0,0,0,.2);
-
-
-    margin-bottom: 40px;
-
-
-}
-
-
-.contact-hero h1 {
-
-
-    color: #001633;
-
-
-    font-size: 5rem;
-
-
-    margin-bottom: 30px;
-
-
-}
-
-
-.contact-hero p {
-
-
-    color: #334155;
-
-
-    font-size: 1.5rem;
-
-
-    max-width: 1000px;
-
-
-    margin: 0 auto;
-
-
-    line-height: 1.8;
-
-
-}
-
-
-.contact-info {
-
-
-    background-color: #020814;
-
-
-    text-align: center;
-
-
-    padding: 100px 20px;
-
-
-}
-
-
-.contact-info h2 {
-
-
-    color: white;
-
-
-    font-size: 3.5rem;
-
-
-    margin-bottom: 60px;
-
-
-}
-
-
-.contact-details {
-
-
-    display: flex;
-
-
-    justify-content: center;
-
-
-    gap: 100px;
-
-
-    flex-wrap: wrap;
-
-
-}
-
-
-.contact-details h3 {
-
-
-    color: white;
-
-
-    margin-bottom: 15px;
-
-
-}
-
-
-.contact-details p {
-
-
-    color: white;
-
-
-    font-size: 1.2rem;
-
-
-    line-height: 1.8;
-
-
-}
-
-
-
 .contact-page {
+  min-height: 100vh;
   background-color: #faf7f1;
 }
 
 .contact-hero {
-  background-color: #faf7f1;
-  padding: 100px 20px 35px;
+  padding: 88px 20px 42px;
+  background:
+    linear-gradient(180deg, rgba(250, 247, 241, 0.96), rgba(250, 247, 241, 1)),
+    url("../assets/plain lil fish photo.png") center / cover;
   text-align: center;
 }
 
 .logo-card {
-  width: 430px;
-  max-width: 90%;
-  background-color: #061b2f;
+  width: min(430px, 90%);
+  margin: 0 auto 48px;
   padding: 22px;
   border-radius: 14px;
-  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.25);
-  margin: 0 auto 55px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #061b2f;
+  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.22);
 }
 
 .logo-card img {
-  width: 100%;
   display: block;
+  width: 100%;
   object-fit: contain;
 }
 
 .contact-hero h1 {
-  font-size: 4.5rem;
+  max-width: 920px;
+  margin: 0 auto 24px;
   color: #061b2f;
-  margin-bottom: 35px;
-  font-weight: 800;
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  text-wrap: balance;
 }
 
 .contact-hero p {
-  max-width: 950px;
+  max-width: 880px;
   margin: 0 auto;
-  color: #061b2f;
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-.contact-info h2 {
-    color: #d4af37;
-    font-size: 2rem;
-    margin-bottom: 30px;
+  color: #243b53;
+  font-size: clamp(1.05rem, 3vw, 1.45rem);
+  line-height: 1.6;
 }
 
-.contact-info strong {
-    color: #d4af37;
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  width: min(1120px, 92%);
+  margin: 34px auto 0;
+  padding: 30px;
+  border-radius: 18px;
+  background-color: #061b2f;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+}
+
+.contact-info h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: #d4af37;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
 .contact-info p {
-    color: #ffffff;
-    line-height: 1.8;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.75;
+}
+
+.contact-info strong {
+  color: #d4af37;
+}
+
+@media (max-width: 760px) {
+  .contact-hero {
+    padding: 64px 18px 34px;
+  }
+
+  .logo-card {
+    margin-bottom: 34px;
+    padding: 16px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    padding: 26px 22px;
+    text-align: center;
+  }
 }

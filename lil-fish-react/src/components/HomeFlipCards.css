@@ -39,7 +39,8 @@
   transform-style: preserve-3d;
 }
 
-.home-flip-card:hover .home-flip-inner {
+.home-flip-card:hover .home-flip-inner,
+.home-flip-card:focus-within .home-flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -88,7 +89,7 @@
 }
 
 .price-line {
-  font-weight: 900;
+  font-weight: 700;
   color: white;
   margin-bottom: 18px;
 }
@@ -104,17 +105,22 @@
   text-decoration: none;
   background-color: var(--accent-color);
   color: #001633;
-  padding: 13px 22px;
-  border-radius: 10px;
-  font-weight: 900;
-  border: 2px solid var(--accent-color);
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 1px solid var(--accent-color);
   transition: all 0.3s ease;
 }
 
 .flip-card-btn:hover {
-  background-color: transparent;
-  color: var(--accent-color);
-  transform: translateY(-3px);
+  background-color: rgba(212, 175, 55, 0.12);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.flip-card-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
 }
 
 @media (max-width: 1000px) {

@@ -1,188 +1,715 @@
-/* =========================
-Booking Inquiry Section
-========================= */
-
 .contact-booking-section {
-  background-color: #faf7f1;
-  padding: 70px 20px 100px;
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.contact-page-heading,
+.quote-inquiry-heading {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
   text-align: center;
 }
 
-.contact-booking-section h2 {
-  color: #001633;
-  font-size: 3rem;
-  margin: 0 0 16px;
+.quote-eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--season-accent, #c8a74f);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
 }
 
-.contact-booking-intro {
-  max-width: 680px;
-  margin: 0 auto 35px;
+.contact-page-heading h2,
+.quote-inquiry-heading h2 {
+  margin: 0 0 1rem;
+  color: var(--season-heading, #102a43);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+}
 
-  color: #444;
-  font-size: 1.1rem;
+.contact-page-heading p:last-child,
+.quote-inquiry-heading p:last-child {
+  margin: 0 auto;
+  color: var(--season-text, #486581);
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
-/* =========================
-Form Container
-========================= */
+.contact-success-message {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  padding: 1.5rem;
+  border: 2px solid var(--season-accent, #c8a74f);
+  border-radius: 16px;
+  background: var(--season-card, #ffffff);
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(15, 39, 64, 0.12);
+}
 
-.contact-booking-form {
-  box-sizing: border-box;
+.contact-success-message h3 {
+  margin: 0 0 0.5rem;
+  color: var(--season-heading, #102a43);
+}
 
-  width: min(90%, 720px);
+.contact-success-message p {
+  margin: 0;
+  color: var(--season-text, #486581);
+  line-height: 1.6;
+}
+
+.quote-error-message,
+.quote-success-message {
+  margin: 0 auto 1.25rem;
+  max-width: 1100px;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  color: #111111;
+}
+
+.quote-error-message {
+  background: #fff0f0;
+  border: 1px solid #d96a6a;
+}
+
+.quote-success-message {
+  background: #eefbf0;
+  border: 1px solid #64a96b;
+}
+
+.quote-error-message strong,
+.quote-success-message strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #111111;
+}
+
+.quote-error-message p,
+.quote-success-message p {
+  margin: 0;
+  color: #111111;
+}
+
+.contact-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 950px;
   margin: 0 auto;
-  padding: 36px;
+}
 
-  background-color: #061b2f;
-  border: 2px solid #d4af37;
-  border-radius: 20px;
-
+.contact-choice-card {
   display: flex;
   flex-direction: column;
-
-  text-align: left;
-
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 20px;
+  background: var(--season-card, #ffffff);
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(15, 39, 64, 0.1);
 }
 
-/* =========================
-Labels
-========================= */
+.contact-choice-icon {
+  display: grid;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(200, 167, 79, 0.15);
+  font-size: 2rem;
+}
 
+.contact-choice-icon svg {
+  width: 30px;
+  height: 30px;
+  color: var(--season-primary, #102a43);
+}
+
+.contact-choice-card h3 {
+  margin: 0 0 0.75rem;
+  color: var(--season-heading, #102a43);
+  font-size: 1.5rem;
+}
+
+.contact-choice-card p {
+  flex: 1;
+  margin: 0 0 1.5rem;
+  color: var(--season-text, #486581);
+  line-height: 1.65;
+}
+
+.contact-choice-card button,
+.vendor-side-card button {
+  width: 100%;
+  min-height: 46px;
+  padding: 0.78rem 1rem;
+  border: 1px solid var(--season-primary, #102a43);
+  border-radius: 8px;
+  background: var(--season-primary, #102a43);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-choice-card button:hover,
+.vendor-side-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(15, 39, 64, 0.14);
+}
+
+.contact-choice-card button:focus-visible,
+.vendor-side-card button:focus-visible,
+.quote-action-buttons button:focus-visible,
+.quote-form-actions button:focus-visible {
+  outline: 3px solid var(--season-accent, #c8a74f);
+  outline-offset: 3px;
+}
+
+.contact-choice-buttons {
+  display: grid;
+  width: 100%;
+  gap: 0.75rem;
+}
+
+.contact-choice-card .secondary-choice-button {
+  border-color: var(--season-accent, #c8a74f);
+  background: rgba(200, 167, 79, 0.12);
+  color: #102a43;
+}
+
+.vendor-form-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.65fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.vendor-request-form {
+  max-width: none;
+  padding: 2rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 20px;
+  background: var(--season-card, #ffffff);
+  box-shadow: 0 16px 40px rgba(15, 39, 64, 0.1);
+}
+
+.vendor-request-form .submit-quote-button {
+  width: 100%;
+}
+
+.vendor-side-card {
+  position: sticky;
+  top: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 20px;
+  background: var(--season-card, #ffffff);
+  box-shadow: 0 16px 40px rgba(15, 39, 64, 0.1);
+}
+
+.vendor-side-card h3 {
+  margin: 0 0 1rem;
+  color: var(--season-heading, #102a43);
+}
+
+.vendor-side-card p {
+  color: var(--season-text, #486581);
+  line-height: 1.65;
+}
+
+.vendor-side-card button {
+  margin-top: 0.75rem;
+}
+
+.quote-calculator-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.quote-calculator-controls {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.calculator-card,
+.quote-summary-card,
+.quote-inquiry-wrapper {
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 20px;
+  background: var(--season-card, #ffffff);
+  box-shadow: 0 16px 40px rgba(15, 39, 64, 0.1);
+}
+
+.calculator-card {
+  padding: 1.75rem;
+}
+
+.calculator-card h3 {
+  margin: 0 0 1.5rem;
+  color: var(--season-heading, #102a43);
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.calculator-card > label:not(.calculator-checkbox),
 .contact-booking-form label {
   display: block;
-
-  color: #ffffff;
-  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--season-heading, #102a43);
   font-weight: 700;
-
-  margin-bottom: 8px;
 }
 
-/* =========================
-Inputs, Select, and Textarea
-========================= */
-
+.calculator-card select,
+.calculator-card input[type="number"],
 .contact-booking-form input,
 .contact-booking-form select,
 .contact-booking-form textarea {
-  box-sizing: border-box;
-
   width: 100%;
-  display: block;
-
-  margin: 0 0 20px;
-  padding: 16px 18px;
-
-  background-color: #fffaf0;
-  color: #061b2f;
-
-  border: 2px solid #d4af37;
+  box-sizing: border-box;
+  margin-bottom: 1.25rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(15, 39, 64, 0.25);
   border-radius: 10px;
-
-  font-family: inherit;
-  font-size: 1rem;
-
-  outline: none;
-
+  background: var(--season-input, #ffffff);
+  color: var(--season-text, #243b53);
+  font: inherit;
   transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
+.calculator-card select:focus,
+.calculator-card input[type="number"]:focus,
 .contact-booking-form input:focus,
 .contact-booking-form select:focus,
 .contact-booking-form textarea:focus {
-  border-color: #f0cc55;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
-}
-
-.contact-booking-form select {
-  cursor: pointer;
+  border-color: var(--season-accent, #c8a74f);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(200, 167, 79, 0.18);
 }
 
 .contact-booking-form textarea {
-  min-height: 140px;
+  min-height: 150px;
   resize: vertical;
 }
 
-/* =========================
-Submit Button
-========================= */
+.calculator-helper-text {
+  margin: -0.65rem 0 0;
+  color: var(--season-text, #627d98);
+  font-size: 0.88rem;
+}
 
-.contact-booking-form button {
-  width: auto;
-  min-width: 210px;
-
-  align-self: center;
-
-  margin: 8px auto 0;
-  padding: 14px 34px;
-
-  background-color: #d4af37;
-  color: #061b2f;
-
-  border: none;
-  border-radius: 10px;
-
-  font-size: 1rem;
-  font-weight: 800;
-
+.calculator-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.8rem;
+  padding: 1rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 12px;
   cursor: pointer;
-
   transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.contact-booking-form button:hover {
-  background-color: #d4af37;
-  color: #061b2f;
-
-  opacity: 0.9;
-  transform: translateY(-2px);
+.calculator-checkbox:hover {
+  border-color: var(--season-accent, #c8a74f);
+  background: rgba(200, 167, 79, 0.07);
+  transform: translateY(-1px);
 }
 
-/* =========================
-Success Message
-========================= */
+.calculator-checkbox input {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.15rem;
+  accent-color: var(--season-accent, #c8a74f);
+}
 
-.contact-success-message {
-  width: min(90%, 720px);
+.calculator-checkbox span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.calculator-checkbox strong {
+  color: var(--season-heading, #102a43);
+}
+
+.calculator-checkbox small {
+  color: var(--season-text, #627d98);
+  line-height: 1.4;
+}
+
+.hourly-option {
+  margin: -0.2rem 0 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 12px;
+  background: rgba(15, 39, 64, 0.04);
+}
+
+.hourly-option label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--season-heading, #102a43);
+  font-weight: 700;
+}
+
+.hourly-option input {
+  width: 100%;
   box-sizing: border-box;
-
-  margin: 0 auto 22px;
-  padding: 15px 20px;
-
-  background-color: #eaf7ec;
-  color: #245c30;
-
-  border: 2px solid #58a96b;
+  margin: 0 !important;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(15, 39, 64, 0.25);
   border-radius: 10px;
-
-  font-weight: 800;
+  background: #ffffff;
+  color: #102a43;
+  font: inherit;
 }
 
-/* =========================
-Mobile Layout
-========================= */
+.hourly-option p {
+  margin: 0.75rem 0 0;
+  color: var(--season-text, #486581);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
 
-@media (max-width: 600px) {
+.security-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: -0.2rem 0 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 12px;
+  background: rgba(15, 39, 64, 0.04);
+}
+
+.security-options div {
+  display: flex;
+  flex-direction: column;
+}
+
+.security-options label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--season-heading, #102a43);
+  font-weight: 700;
+}
+
+.security-options input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 !important;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(15, 39, 64, 0.25);
+  border-radius: 10px;
+  background: #ffffff;
+  color: #102a43;
+  font: inherit;
+}
+
+.security-calculation {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--season-text, #486581);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.quote-summary-card {
+  position: sticky;
+  top: 1.5rem;
+  overflow: hidden;
+}
+
+.quote-summary-heading {
+  padding: 1.75rem;
+  background: var(--season-primary, #102a43);
+  color: #ffffff;
+  text-align: center;
+}
+
+.quote-summary-heading p {
+  margin: 0 0 0.35rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.quote-summary-heading h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.quote-event-summary {
+  padding: 1.4rem 1.5rem 0;
+}
+
+.quote-event-summary p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(15, 39, 64, 0.09);
+  color: var(--season-text, #486581);
+}
+
+.quote-event-summary strong {
+  color: var(--season-heading, #102a43);
+  text-align: right;
+}
+
+.quote-price-breakdown {
+  padding: 1rem 1.5rem;
+}
+
+.quote-price-breakdown div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  color: var(--season-text, #486581);
+  font-size: 0.93rem;
+}
+
+.quote-price-breakdown span {
+  max-width: 70%;
+}
+
+.quote-price-breakdown strong {
+  color: var(--season-heading, #102a43);
+  white-space: nowrap;
+}
+
+.quote-total-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 1.5rem;
+  padding: 1.1rem 0;
+  border-top: 2px solid var(--season-accent, #c8a74f);
+  color: var(--season-heading, #102a43);
+  font-size: 1.2rem;
+}
+
+.quote-total-row strong {
+  color: var(--season-primary, #102a43);
+}
+
+.quote-disclaimer {
+  margin: 0;
+  padding: 0 1.5rem 1.25rem;
+  color: var(--season-text, #627d98);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.quote-action-buttons {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.quote-action-buttons button,
+.quote-form-actions button {
+  min-height: 46px;
+  padding: 0.78rem 1.05rem;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.quote-action-buttons button:hover,
+.quote-form-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.quick-quote-button,
+.submit-quote-button {
+  border: 1px solid var(--season-primary, #102a43);
+  background: var(--season-primary, #102a43);
+  color: #ffffff;
+}
+
+.quick-quote-button:hover,
+.submit-quote-button:hover {
+  box-shadow: 0 6px 14px rgba(15, 39, 64, 0.14);
+}
+
+.submit-quote-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.text-button,
+.cancel-quote-button {
+  border: 1px solid rgba(16, 42, 67, 0.45) !important;
+  background: transparent !important;
+  color: var(--season-primary, #102a43) !important;
+}
+
+.text-button:hover,
+.cancel-quote-button:hover {
+  background: rgba(15, 39, 64, 0.07) !important;
+}
+
+.quote-inquiry-wrapper {
+  margin-top: 4rem;
+  padding: 2rem;
+  scroll-margin-top: 2rem;
+}
+
+.quote-inquiry-heading {
+  margin-bottom: 2rem;
+}
+
+.quote-inquiry-heading h2 {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.contact-booking-form {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.submitted-quote-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(15, 39, 64, 0.12);
+  border-radius: 14px;
+  background: rgba(15, 39, 64, 0.04);
+}
+
+.submitted-quote-preview div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.submitted-quote-preview span {
+  color: var(--season-text, #627d98);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.submitted-quote-preview strong {
+  color: var(--season-heading, #102a43);
+  font-size: 1.05rem;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 950px) {
+  .quote-calculator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-summary-card {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  .vendor-form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-side-card {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
   .contact-booking-section {
-    padding: 55px 16px 75px;
+    width: min(94%, 1200px);
+    padding: 2.5rem 0;
   }
 
-  .contact-booking-section h2 {
-    font-size: 2.3rem;
+  .contact-choice-grid {
+    grid-template-columns: 1fr;
   }
 
-  .contact-booking-form {
+  .calculator-card,
+  .quote-inquiry-wrapper,
+  .vendor-request-form {
+    padding: 1.25rem;
+  }
+
+  .security-options,
+  .contact-form-grid,
+  .submitted-quote-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .security-calculation {
+    grid-column: auto;
+  }
+
+  .submitted-quote-preview div {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(15, 39, 64, 0.1);
+  }
+
+  .submitted-quote-preview div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .quote-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .quote-form-actions button {
     width: 100%;
-    padding: 26px 20px;
   }
 
-  .contact-booking-form button {
-    width: 100%;
+  .quote-event-summary p,
+  .quote-price-breakdown div {
+    align-items: flex-start;
   }
 }

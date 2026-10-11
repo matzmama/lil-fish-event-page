@@ -1,4 +1,5 @@
 import "./HomeFlipCards.css";
+import { Link } from "react-router-dom";
 
 import harvestFestival from "../assets/lil fish harvest festival.png";
 import holidayMarket from "../assets/Lil Fish Holiday market.png";
@@ -32,9 +33,13 @@ function HomeFlipCards() {
                 community traditions.
               </p>
 
-              <a href="/contact" className="flip-card-btn">
-                Reserve Vendor Space
-              </a>
+              <Link
+                to="/contact?type=harvest-festival"
+                className="flip-card-btn"
+              >
+                 Reserve Vendor Space
+              </Link>
+
             </div>
           </div>
         </div>
@@ -55,10 +60,12 @@ function HomeFlipCards() {
                 Indoor vendor spaces for artists, bakers, boutiques, and local
                 makers.
               </p>
-
-              <a href="/contact" className="flip-card-btn">
-                Apply As Vendor
-              </a>
+              <Link
+                 to="/contact?type=holiday-market"
+                className="flip-card-btn"
+              >
+                 Reserve Vendor Space
+              </Link>
             </div>
           </div>
         </div>
@@ -80,9 +87,12 @@ function HomeFlipCards() {
                 milestone celebrations.
               </p>
 
-              <a href="/contact" className="flip-card-btn">
-                Request Information
-              </a>
+              <Link
+                to="/contact?type=wedding-venue"
+                className="flip-card-btn"
+              >
+                Plan a Celebration
+              </Link>
             </div>
           </div>
         </div>
